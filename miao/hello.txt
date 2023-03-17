@@ -1,3 +1,0 @@
-1世界
-
-hello.world
