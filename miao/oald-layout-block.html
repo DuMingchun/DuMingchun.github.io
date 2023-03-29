@@ -6,128 +6,126 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    div{
-      font-size: 24px;
-      display: flow-root;
-      border: 2px solid;
-      margin: auto;
-      min-width: 600px;
-      height: 800px;
-      background-color: rgb(231, 255, 144);
+    *{
+      margin: 0;
+      box-sizing:border-box;
     }
-    div>span{
-      background-color: rgb(255, 205, 230);
-      float: left;
+    html,body{
+      height: 100%;
+    }
+    div.oald{
+      background-color:hotpink;
+      height: 100vh;
       width: 240px;
-      height: 800px;
-      border: 1px solid;
+      border-right: 3px solid;
+      overflow:auto;
     }
-    span[name="center"]{
-      float: right;
-      height: 800px;
+    div.fant{
+      background-color:bisque;
+      width: calc(100% - 720px);
+      height: 100vh;
+      margin-left: 240px;
+      margin-top: -100vh;
+      overflow: auto;
     }
-    a[name="bt"]{
-      font-weight: bolder;
-      font-size: 32px;
 
+    div.voca{
+      background-color:violet;
+      height: 100vh;
+      width: 240px;
+      margin-left:calc(100% - 480px);
+      margin-top: -100vh;
+      border-left: 3px solid;
     }
-    span>p{
-      height: 700px;
-      font-size: 24px;
-      overflow-y: scroll;
-      overflow-x: hidden;
+    div.hist{
+      background-color:violet;
+      height: 100vh;
+      width: 240px;
+      margin-left:calc(100% - 240px);
+      margin-top: -100vh;
+      border-left: 3px solid;
     }
-    span>p>a{
-      display: block;
-      margin-left: 20px;
-    }
-    p.tp{
-      border: 2px solid;
-      font-size: 32px;
-      margin: 0px;
-      padding-bottom: 24px;
+    p.bt{
       font-weight: bolder;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      padding-left: 1em;
+      font-size: 32px;
     }
-    p.text{
-      line-height: 1.5em;
-      height: 700px;
-      overflow-y: scroll;
+    div.fant>p.bt{
+      border-bottom: 3px solid;
+    }
+    div.voca>P,div.hist>p{
+      direction: rtl;
+      padding-right: 16px;
+    }
+    p.zw{
+      font-size: 24px;
     }
 
 
   </style>
 </head>
 <body>
-  <div>
-    <span>
-      <a name="bt">OALD Se7en</a>
-      <form target="_blank">
+  <div class="oald">
+    <p class="bt">OALD Se7en</p>
+    <p>
+      <form>
         <input type="text" name="q">
-        <button type="submit">点击</button>
+        <button type="subimt">搜索</button>
       </form>
-      <p>
-        <a href="">word1</a>
-        <a href="">word2</a>
-        <a href="">word3</a>
-        <a href="">word4</a>
-        <a href="">word5</a>
-        <a href="">word6</a>
-        <a href="">word7</a>
-        <a href="">word9</a>
-        <a href="">word10</a>
-        <a href="">word11</a>
-        <a href="">word12</a>
-        <a href="">word13</a>
-        <a href="">word14</a>
-        <a href="">word15</a>
-        <a href="">word16</a>
-        <a href="">word17</a>
-        <a href="">word18</a>
-        <a href="">word19</a>
-        <a href="">word20</a>
-        <a href="">word21</a>
-        <a href="">word22</a>
-        <a href="">word23</a>
-        <a href="">word24</a>
-        <a href="">word25</a>
-      </p>
-    </span>
-    <span name="center">
-      <a name="bt">Vocabulary</a>
-    </span>
-    <span name="center">
-      <a name="bt">History</a>
-    </span>
-    <p class="tp">
-      fantasty
     </p>
-    <p class="text">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-      Dolorum neque porro eligendi sunt impedit quae dolor nemo voluptatem! Saepe nisi neque
-      possimus quae dolores obcaecati debitis dolore eligendi et distinctio.
-      Modi velit odio dolores ex suscipit quod. Natus voluptas facilis, recusandae aliquam
-      facere et molestiae. Fuga cumque vero ipsa eveniet labore minima, sunt voluptas soluta totam at
-      repellat praesentium itaque.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt ex et nam aliquid modi asperiores consequuntur, nemo numquam vitae. Delectus magni suscipit odit voluptatum? Culpa incidunt molestias odio iusto.
-      Reprehenderit sapiente accusantium a accusamus rem unde reiciendis obcaecati veniam praesentium est ea, cum doloremque! Expedita suscipit distinctio error? Eligendi quisquam praesentium est temporibus at exercitationem aperiam, similique dicta iusto!
-      Numquam, odio nesciunt! Eligendi sunt illum voluptatem. Harum, voluptatibus natus velit itaque commodi, nulla inventore impedit obcaecati assumenda doloribus ex corrupti! Laboriosam, aperiam modi! Repudiandae vel laboriosam non ratione architecto.
-      Deleniti beatae atque omnis. Nulla unde, accusamus quam eos in asperiores recusandae totam provident magnam, architecto, odio sed excepturi. Eum laboriosam doloribus sed officia non libero dicta sunt fuga soluta.
-      Temporibus maiores modi, nisi nobis, ipsam officiis optio sunt impedit laudantium laborum praesentium delectus voluptas veritatis libero minus eveniet nesciunt molestias dolorum pariatur nam debitis voluptatibus fugit? Similique, voluptates voluptate.
-      Vitae repudiandae debitis voluptatum dolorem pariatur! Iste quidem fuga illo in minima repellendus, corrupti suscipit alias vero iusto ducimus tempore harum? Fuga quis aliquid dolorem error laudantium ex, quaerat ducimus?
-      Omnis eveniet eaque culpa explicabo voluptates, officia eius at ipsam fugit iusto dolor perspiciatis ipsum sapiente quas animi! Harum maxime aliquam praesentium earum voluptas fuga suscipit doloribus quo explicabo dicta.
-      Nobis minima deserunt esse qui molestias sed voluptatem totam mollitia consectetur perspiciatis quis cumque, accusantium sint doloremque corporis ratione commodi deleniti corrupti laboriosam ut at! Delectus vero assumenda cumque earum!
-      Eius aspernatur beatae rem porro et molestiae necessitatibus placeat iste delectus saepe incidunt, earum minus ullam tempore pariatur error reprehenderit suscipit consequuntur, rerum harum esse fugit corrupti. Doloribus, voluptas quos!
-      Doloribus, voluptates at? Harum, quisquam? Eligendi sed illo rem nam eveniet totam repellat vero est itaque sit. Harum quasi porro, ex numquam, voluptatem aut, asperiores quod assumenda ab similique adipisci!
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, ut nisi. Est, quod repellat libero incidunt cupiditate repudiandae atque voluptates, necessitatibus nam perferendis quidem possimus magni voluptas beatae eos quo?
-      Magni tempora necessitatibus nihil incidunt et quisquam aperiam, perspiciatis id error assumenda
-      harum officiis! Praesentium quisquam, exercitationem doloremque, suscipit quasi magnam, vel eum corporis
-      rem laudantium porro ipsam corrupti veniam.
-      nderit minima exercitationem eos impedit vitae tempora deleniti beatae dolorem ipsa corrupti sit laborum ab, rem tempore laboriosam! Corporis eum hic quos. Qui tempore perferendis corporis a laudantium.
-      Quaerat veritatis accusamus et voluptatum corrupti, blanditiis porro similique asperiores nostrum provident soluta natus eos odit necessitatibus. Facilis sed optio nulla ut at! Dolorem voluptatibus facere soluta modi nulla minus.
+    <p>
+      <ul>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+        <li>word</li>
+      </ul>
     </p>
-
-
-
+  </div>
+  <div class="fant">
+    <p class="bt">
+      fantasy
+    </p>
+    <p class="zw">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum praesentium accusantium blanditiis quos repudiandae, impedit nobis dolor ducimus quidem, recusandae quod iste a voluptas harum modi doloribus eaque, expedita pariatur?
+    Laudantium, quod accusantium. Praesentium laudantium delectus doloremque quos iure quam doloribus unde voluptate aperiam eius. Tempore voluptate asperiores aspernatur, sint suscipit sequi animi quis aperiam adipisci id doloremque blanditiis at.
+    Ab doloremque ducimus officiis laboriosam pariatur, libero id similique quidem ipsa nemo officia corporis recusandae dicta et illum eaque quisquam aliquam ipsum ea praesentium natus quae quia placeat. Itaque, officiis?
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis necessitatibus numquam illo aliquam doloribus, ipsa inventore quisquam nihil sequi, incidunt magni veritatis reiciendis aperiam voluptas accusantium? Deserunt, magni. Ab, neque!
+    </p>
+  </div>
+  <div class="voca">
+    <P class="bt">Vocabulary</P>
+  </div>
+  <div class="hist">
+    <p class="bt">History</p>
   </div>
 
 </body>
