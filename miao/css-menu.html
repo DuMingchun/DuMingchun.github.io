@@ -64,6 +64,12 @@
       border-radius: 5px;
       background-color: rgb(27, 27, 27);
     }
+    ul.Secondary-menu>li>span{
+      width: 240px;
+    }
+    li{
+      display: block;
+    }
     ul.Level3-Menu{
       display: none;
       width: 140px;
@@ -74,10 +80,17 @@
       position: fixed;
       display: block;
     }
-
-    :focus-within{
-      display: block;
+    ul.Secondary-menu:hover ul.Level3-Menu{
+      display: inline-block;
+      position: absolute;
+    }
+    div.headmenu>:focus-within{
+      display: inline-block;
       position: fixed;
+    }
+    ul.Secondary-menu>:focus-within{
+      display: inline-block;
+      position: relative;
     }
     ul.Secondary-menu>li:hover{
       border-radius: 5px;
@@ -107,18 +120,12 @@
           <li>打开文件</li>
           <li>打开文件夹</li>
           <li>从文件打开工作区</li>
-          <li>
-
-              <span>打开最近的文件</span>
-
-              <ul class="Level3-Menu">
-                <li>aaa</li>
-                <li>bbb</li>
-                <li>ccc</li>
-              </ul>
-
-
-
+          <li><span>打开最近的文件</span>
+            <ul class="Level3-Menu">
+              <li>aaa</li>
+              <li>bbb</li>
+              <li>ccc</li>
+            </ul>
           </li>
           <li></li>
           <li></li>
