@@ -16,54 +16,42 @@
     ul,li{
       padding: 0;
       margin: 0;
-
-
+      list-style: none;
+    }
+    div.head{
+      height: 30px;
+      font-size: 20px;
+      color: rgb(180, 180, 180);
+      background-color: rgb(50, 50, 50);
+    }
+    div img{
+      height: 25px;
+      width: 25px;
+    }
+    div>span{
+      vertical-align: top;
+      height: 30px;
     }
     div.headmenu{
-      background-color: rgb(50,50,51);
-      height: 40px;
-      vertical-align: bottom;
-      color: rgb(150, 150, 150);
-      overflow: hidden;
-    }
-    div.headmenu div{
+      position: relative;
       display: inline-block;
-      height: 40px;
-      width: 60px;
-    }
-    div.headmenu img{
-      vertical-align:middle;
-      height: 40px;
-      width: 40px;
-      margin-right: 20px;
-      margin-left: 10px;
-    }
-    div.headmenu span{
-      margin-left: 10%;
-    }
-    div.headmenu ul{
       text-align: center;
-      padding: 5px;
+      vertical-align: top;
+      height: 30px;
+      width: 60px;
+      background-color: rgb(50, 50, 50);
+    }
+    ul.Secondary-menu{
+      display: none;
+    }
+    span.first-menu:hover{
+
     }
 
-    div.headmenu ul:hover{
-      border: 0 solid;
-      border-radius: 5px;
-      background-color: rgba(150, 150, 150, 0.2);
-    }
-    ul.wenjian-menu{
-      position: fixed;
-      display: block;
-      width: 200px;
-      background-color: rgb(44, 44, 44);
-    }
-    ul.wenjian-menu li{
-      display: block;
-      width: 200px;
-    }
-    div.wenjian-menu button{
-      /* display: none; */
-    }
+
+
+
+
 
 
 
@@ -71,30 +59,35 @@
 </head>
 <body>
   <div>
-    <div class="headmenu">
+    <div class="head">
       <img src="jpg.jpg" alt="">
-      <div class="ul-menu">
-        <ul>文件</ul>
-        <ul class="wenjian-menu">
-          <il><a>新建文件夹</a></li>
-          <il><a>新建文件</a></li>
-          <il><a>新建窗口</a></li>
-          <il><a>打开文件</a></li>
-          <il><a>打开文件夹</a></li>
-          <il><a>从文件打开工作区</a></li>
-          <il><a>打开最近的文件</a></li>
-          <il><a>将文件夹添加到工作区</a></li>
-          <il><a>将工作区另存为</a></li>
-          <il><a>复制工作区</a></li>
+      <div class="headmenu">
+        <span class="first-menu">文件</span>
+        <ul class="Secondary-menu">
+          <li>a</li>
         </ul>
       </div>
-      <div class="ul-menu"><ul>编辑</ul></div>
-      <div class="ul-menu"><ul>选择</ul></div>
-      <div class="ul-menu"><ul>查看</ul></div>
-      <div class="ul-menu"><ul>转到</ul></div>
-      <div class="ul-menu"><ul>运行</ul></div>
-      <div class="ul-menu"><ul>终端</ul></div>
-      <div class="ul-menu"><ul>帮助</ul></div>
+      <div class="headmenu">
+        <span class="first-menu">编辑</span>
+      </div>
+      <div class="headmenu">
+        <span class="first-menu">选择</span>
+      </div>
+      <div class="headmenu">
+        <span class="first-menu">查看</span>
+      </div>
+      <div class="headmenu">
+        <span class="first-menu">转到</span>
+      </div>
+      <div class="headmenu">
+        <span class="first-menu">运行</span>
+      </div>
+      <div class="headmenu">
+        <span class="first-menu">终端</span>
+      </div>
+      <div class="headmenu">
+        <span class="first-menu">帮助</span>
+      </div>
       <span>·css-menu.html - DuMingchun - Visual Studio Code</span>
     </div>
   </div>
