@@ -31,11 +31,19 @@
       height: 30px;
       width: 60px;
     }
+    span.lv1-menu:hover{
+      background-color: rgb(122, 122, 122);
+    }
+    div.lv2-menu>div:hover{
+      background-color: rgb(122, 122, 122);
+    }
+    div.lv3-menu>div:hover{
+      background-color: rgb(122, 122, 122);
+    }
+
     div.lv2-menu{
       position: absolute;
       display: none;
-      padding-left: 10px;
-      text-align: left;
       width: 240px;
       height: auto;
       background-color: rgb(31, 31, 31);
@@ -45,6 +53,7 @@
       position: absolute;
       left: 240px;
       top: 165px;
+      text-align: left;
       width: 120px;
       height: auto;
       background-color: rgb(31, 31, 31);
@@ -61,6 +70,7 @@
 <body>
   <div class="menu">
     <div class="headmenu">
+      <span><img src="jpg.jpg" alt="" width="25px" height="25px"></span>
       <span class="lv1-menu">
         <span>文件</span>
         <div class="lv2-menu">
@@ -74,6 +84,8 @@
             <div class="lv3-menu">
               <div>aaa</div>
               <div>bbb</div>
+              <div>ccc</div>
+              <div>ddd</div>
             </div>
           </div>
         </div>
