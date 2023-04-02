@@ -12,6 +12,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      min-width: 720px;
     }
     ul,li{
       padding: 0;
@@ -20,17 +21,21 @@
     }
     div.head{
       height: 30px;
-      font-size: 20px;
+      font-size: 16px;
       color: rgb(180, 180, 180);
       background-color: rgb(50, 50, 50);
+      overflow: hidden;
     }
     div img{
       height: 25px;
       width: 25px;
     }
-    div>span{
+    div>span.T{
       vertical-align: top;
       height: 30px;
+      margin-left: 10%;
+      margin-right: 0;
+      overflow: hidden;
     }
     div.headmenu{
       position: relative;
@@ -41,11 +46,42 @@
       width: 60px;
       background-color: rgb(50, 50, 50);
     }
+    div.headmenu button{
+      display: inline-block;
+      border: none;
+      height: 30px;
+      font-size: 16px;
+      color: rgb(180, 180, 180);
+      background-color: rgba(0, 0, 0, 0);
+    }
+    div.headmenu button:hover{
+      border-radius: 5px;
+      background-color: rgba(156, 156, 156, 0.4);
+    }
     ul.Secondary-menu{
       display: none;
+      width: 240px;
+      border-radius: 5px;
+      background-color: rgb(27, 27, 27);
     }
-    span.first-menu:hover{
+    ul.Level3-Menu{
+      display: none;
+      width: 140px;
+      border-radius: 5px;
+      background-color: rgb(27, 27, 27);
+    }
+    div.headmenu:hover ul.Secondary-menu{
+      position: fixed;
+      display: block;
+    }
 
+    :focus-within{
+      display: block;
+      position: fixed;
+    }
+    ul.Secondary-menu>li:hover{
+      border-radius: 5px;
+      background-color: rgb(20, 62, 139);
     }
 
 
@@ -62,33 +98,59 @@
     <div class="head">
       <img src="jpg.jpg" alt="">
       <div class="headmenu">
-        <span class="first-menu">文件</span>
+        <button class="first-menu">文件</button>
         <ul class="Secondary-menu">
-          <li>a</li>
+          <li>新建文本文件</li>
+          <li>新建文件夹</li>
+          <li>新建文本窗口</li>
+          <hr>
+          <li>打开文件</li>
+          <li>打开文件夹</li>
+          <li>从文件打开工作区</li>
+          <li>
+
+              <span>打开最近的文件</span>
+
+              <ul class="Level3-Menu">
+                <li>aaa</li>
+                <li>bbb</li>
+                <li>ccc</li>
+              </ul>
+
+
+
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+
         </ul>
       </div>
       <div class="headmenu">
-        <span class="first-menu">编辑</span>
+        <button class="first-menu">编辑</button>
       </div>
       <div class="headmenu">
-        <span class="first-menu">选择</span>
+        <button class="first-menu">选择</button>
       </div>
       <div class="headmenu">
-        <span class="first-menu">查看</span>
+        <button class="first-menu">查看</button>
       </div>
       <div class="headmenu">
-        <span class="first-menu">转到</span>
+        <button class="first-menu">转到</button>
       </div>
       <div class="headmenu">
-        <span class="first-menu">运行</span>
+        <button class="first-menu">运行</button>
       </div>
       <div class="headmenu">
-        <span class="first-menu">终端</span>
+        <button class="first-menu">终端</button>
       </div>
       <div class="headmenu">
-        <span class="first-menu">帮助</span>
+        <button class="first-menu">帮助</button>
       </div>
-      <span>·css-menu.html - DuMingchun - Visual Studio Code</span>
+      <span class="T">·css-menu.html - DuMingchun - Visual Studio Code</span>
     </div>
   </div>
 
