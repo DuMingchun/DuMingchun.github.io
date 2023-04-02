@@ -6,159 +6,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    html,body{
-      height: 100%;
+    html,body,div{
       width: 100%;
+      height: 100%;
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      min-width: 720px;
     }
-    ul,li{
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-    div.head{
-      height: 30px;
-      font-size: 16px;
-      color: rgb(180, 180, 180);
-      background-color: rgb(50, 50, 50);
-      overflow: hidden;
-    }
-    div img{
-      height: 25px;
-      width: 25px;
-    }
-    div>span.T{
-      vertical-align: top;
-      height: 30px;
-      margin-left: 10%;
-      margin-right: 0;
-      overflow: hidden;
+    div.menu{
+      position: relative;
+      color: #b6b6b6;
     }
     div.headmenu{
-      position: relative;
-      display: inline-block;
-      text-align: center;
-      vertical-align: top;
       height: 30px;
-      width: 60px;
+      width: 100%;
+      color: #b6b6b6;
       background-color: rgb(50, 50, 50);
     }
-    div.headmenu button{
+    span.lv1-menu{
       display: inline-block;
-      border: none;
+      text-align: center;
+      vertical-align: bottom;
+      line-height: 1.7;
       height: 30px;
-      font-size: 16px;
-      color: rgb(180, 180, 180);
-      background-color: rgba(0, 0, 0, 0);
+      width: 60px;
     }
-    div.headmenu button:hover{
-      border-radius: 5px;
-      background-color: rgba(156, 156, 156, 0.4);
-    }
-    ul.Secondary-menu{
-      display: none;
-      width: 240px;
-      border-radius: 5px;
-      background-color: rgb(27, 27, 27);
-    }
-    ul.Secondary-menu>li>span{
-      width: 240px;
-    }
-    li{
-      display: block;
-    }
-    ul.Level3-Menu{
-      display: none;
-      width: 140px;
-      border-radius: 5px;
-      background-color: rgb(27, 27, 27);
-    }
-    div.headmenu:hover ul.Secondary-menu{
-      position: fixed;
-      display: block;
-    }
-    ul.Secondary-menu:hover ul.Level3-Menu{
-      display: inline-block;
+    div.lv2-menu{
       position: absolute;
+      display: none;
+      padding-left: 10px;
+      text-align: left;
+      width: 240px;
+      height: auto;
+      background-color: rgb(31, 31, 31);
     }
-    div.headmenu>:focus-within{
-      display: inline-block;
-      position: fixed;
+    div.lv3-menu{
+      display: none;
+      position: absolute;
+      left: 240px;
+      top: 165px;
+      width: 120px;
+      height: auto;
+      background-color: rgb(31, 31, 31);
     }
-    ul.Secondary-menu>:focus-within{
-      display: inline-block;
-      position: relative;
+    span.lv1-menu:hover .lv2-menu{
+      display: block;
     }
-    ul.Secondary-menu>li:hover{
-      border-radius: 5px;
-      background-color: rgb(20, 62, 139);
+    div.lv2-menu>div:hover .lv3-menu{
+      display: block;
     }
-
-
-
-
-
-
-
 
   </style>
 </head>
 <body>
-  <div>
-    <div class="head">
-      <img src="jpg.jpg" alt="">
-      <div class="headmenu">
-        <button class="first-menu">文件</button>
-        <ul class="Secondary-menu">
-          <li>新建文本文件</li>
-          <li>新建文件夹</li>
-          <li>新建文本窗口</li>
-          <hr>
-          <li>打开文件</li>
-          <li>打开文件夹</li>
-          <li>从文件打开工作区</li>
-          <li><span>打开最近的文件</span>
-            <ul class="Level3-Menu">
-              <li>aaa</li>
-              <li>bbb</li>
-              <li>ccc</li>
-            </ul>
-          </li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+  <div class="menu">
+    <div class="headmenu">
+      <span class="lv1-menu">
+        <span>文件</span>
+        <div class="lv2-menu">
+          <div>新建文本文件</div>
+          <div>新建文件</div>
+          <div>新建窗口</div>
+          <div>打开文件</div>
+          <div>打开文件夹</div>
+          <div>从文件打开工作区</div>
+          <div>打开最近的文件
+            <div class="lv3-menu">
+              <div>aaa</div>
+              <div>bbb</div>
+            </div>
+          </div>
+        </div>
+      </span>
+      <span class="lv1-menu">
+        <span>编辑</span>
+        <div class="lv2-menu">
 
-        </ul>
-      </div>
-      <div class="headmenu">
-        <button class="first-menu">编辑</button>
-      </div>
-      <div class="headmenu">
-        <button class="first-menu">选择</button>
-      </div>
-      <div class="headmenu">
-        <button class="first-menu">查看</button>
-      </div>
-      <div class="headmenu">
-        <button class="first-menu">转到</button>
-      </div>
-      <div class="headmenu">
-        <button class="first-menu">运行</button>
-      </div>
-      <div class="headmenu">
-        <button class="first-menu">终端</button>
-      </div>
-      <div class="headmenu">
-        <button class="first-menu">帮助</button>
-      </div>
-      <span class="T">·css-menu.html - DuMingchun - Visual Studio Code</span>
+        </div>
+      </span>
+      <span class="lv1-menu">
+        <span>选择</span>
+        <div class="lv2-menu">
+
+        </div>
+      </span>
+      <span class="lv1-menu">
+        <span>查看</span>
+        <div class="lv2-menu">
+
+        </div>
+      </span>
+      <span class="lv1-menu">
+        <span>转到</span>
+        <div class="lv2-menu">
+
+        </div>
+      </span>
+      <span class="lv1-menu">
+        <span>运行</span>
+        <div class="lv2-menu">
+
+        </div>
+      </span>
+      <span class="lv1-menu">
+        <span>终端</span>
+        <div class="lv2-menu">
+
+        </div>
+      </span>
+      <span class="lv1-menu">
+        <span>帮助</span>
+        <div class="lv2-menu">
+
+        </div>
+      </span>
     </div>
+
+
   </div>
 
 
