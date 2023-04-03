@@ -7,14 +7,29 @@
   <title>Dt</title>
   <style>
     div.A{
+      position: relative;
       height: 150px;
       width: 280px;
       border-radius: 85px;
       border: 5px solid rgb(150, 150, 150);
-      background-color: rgba(0, 0, 0, 0);
+      background-color: rgba(255, 255, 255, 1);
       transition:background-color 0.3s cubic-bezier(.78,.1,.27,.95) , border 0.5s cubic-bezier(.78,.1,.27,.95);
     }
+    div.white{
+      position: relative;
+      box-sizing: border-box;
+      border-radius: 85px;
+      width: 280px;
+      height: 150px;
+      margin-top: -150px;
+      border: 0px solid rgb(14, 255, 34);
+      background-color: rgb(255, 255, 255);
+      transition: border-width 0.3s ease-in;
+    }
     div.cir{
+      position: relative;
+      z-index: 1;
+      z-index: 100;
       height: 130px;
       width: auto;
       border-radius: 85px;
@@ -22,7 +37,7 @@
       margin-bottom: 10px;
       margin-left: 10px;
       margin-right: 130px;
-      background-color: white;
+      background-color: rgba(255, 255, 255, 1);
       box-shadow: 0px 0px 20px rgba(92, 92, 92, 0.753);
       transition: margin-left 0.3s ease-out , margin-right 0.3s ease-in;
     }
@@ -35,15 +50,18 @@
       border-color: rgba(13, 255, 53, 1);
       background-color: rgba(13, 255, 53, 1);
     }
+    div.A:hover div.white{
+      border-width: 75px 80px 75px 200px;
+    }
 
   </style>
 </head>
 <body>
   <div class="A">
-    <div class="white"></div>
     <div class="cir"></div>
-
+    <div class="white"></div>
   </div>
+
 
 </body>
 </html>
