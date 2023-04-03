@@ -6,175 +6,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    html,body,div{
-      width: 100%;
+    html,body{
       height: 100%;
+      width: 100%;
       box-sizing: border-box;
       margin: 0;
-      padding: 0;
-    }
-    div.menu{
-      position: relative;
-      color: #b6b6b6;
-      font-size: 16px;
-      font-family:"微软雅黑","黑体",sans-serif;
     }
     div.headmenu{
+      font-size: 0;
       height: 30px;
-      width: 100%;
-      color: #b6b6b6;
+      color: rgb(161, 161, 161);
       background-color: rgb(50, 50, 50);
     }
-    span.lv1-menu{
+    ul{
+      list-style: none;
+      padding: 0;
+    }
+    ul.lv1-menu>li{
       display: inline-block;
-      text-align: center;
-      vertical-align: bottom;
-      line-height: 1.7;
-      height: 30px;
+      font-size: 20px;
       width: 60px;
+      height: 30px;
+      text-align: center;
     }
-    span.lv1-menu:hover{
+    ul.lv1-menu li:hover{
+      background-color: rgb(77, 77, 77);
       border-radius: 5px;
-      background-color: rgb(75, 75, 75);
-    }
-    div.lv2-menu>div:hover{
-      border-radius: 5px;
-      background-color: rgb(26, 108, 231);
-    }
-    div.lv3-menu>div:hover{
-      border-radius: 5px;
-      background-color: rgb(26, 108, 231);
     }
 
-    div.lv2-menu{
-      position: absolute;
-      display: none;
-      width: 240px;
-      height: auto;
-      border-radius: 5px;
-      background-color: rgb(31, 31, 31);
+    ul.lv1-menu li{
+      position: relative;
+      white-space: nowrap;
     }
-    div.lv3-menu{
-      display: none;
+    ul.lv1-menu ul{
       position: absolute;
-      left: 240px;
-      width: 120px;
-      height: auto;
-      border-radius: 5px;
-      background-color: rgb(31, 31, 31);
+      left: 0;
+      top: 100%;
+      width: 13em;
+      background-color: rgb(26, 26, 26);
     }
-    span.lv1-menu:hover .lv2-menu{
+    ul.lv2-menu li{
+      display: none;
+      text-align: left;
+      padding-left: 10px;
+    }
+    ul.lv1-menu li:hover >ul>li {
       display: block;
     }
-    div.lv2-menu>div:hover .lv3-menu{
-      display: inline-block;
+    ul.lv1-menu ul ul{
+      position: absolute;
+      left: 100%;
+      top: 0;
     }
+    ul.lv1-menu ul ul::before{
+      content: '>';
+      position: absolute;
+      right: 100%;
+      margin-right: 10px;
+    }
+
+
+
   </style>
 </head>
 <body>
-  <div class="menu">
+  <div>
     <div class="headmenu">
-      <span><img src="jpg.jpg" alt="" width="25px" height="25px"></span>
-      <span class="lv1-menu">
-        <span>文件</span>
-        <div class="lv2-menu">
-          <div>新建文本文件</div>
-          <div>新建文件</div>
-          <div>新建窗口</div>
-          <hr>
-          <div>打开文件</div>
-          <div>打开文件夹</div>
-          <div>从文件打开工作区</div>
-          <div>打开最近的文件
-            <div class="lv3-menu">
-              <div>aaa</div>
-              <div>bbb</div>
-              <div>ccc</div>
-              <div>ddd</div>
-            </div>
-          </div>
-        </div>
-      </span>
-      <span class="lv1-menu">
-        <span>编辑</span>
-        <div class="lv2-menu">
-          <div>撤销</div>
-          <div>恢复</div>
-          <hr>
-          <div>剪切</div>
-          <div>复制</div>
-          <div>复制为
-            <div class="lv3-menu">
-              <div>AAAA</div>
-              <div>bbb</div>
-            </div>
-          </div>
-          <div>粘贴</div>
+      <ul class="lv1-menu">
+        <li>文件
+          <ul class="lv2-menu">
+            <li>新建文本文件</li>
+            <li>新建文件</li>
+            <li>新建窗口</li>
+            <li>打开文件</li>
+            <li>打开文件夹</li>
+            <li>从文件打开工作区</li>
+            <li>打开最近的文件
+              <ul>
+                <li>aaa</li>
+                <li>bbbb</li>
+                <li>ccccc</li>
+                <li>dddddd</li>
+              </ul>
+            </li>
+            <li>将文件夹添加到工作区</li>
+            <li>将工作区另存为...</li>
+            <li>复制工作区</li>
+            <li>保存</li>
+            <li>另存为...</li>
+            <li>全部保存</li>
+            <li>共享
+              <ul>
+                <li>Copy vsCode.dev Link</li>
+                <li>导出配置文件</li>
+                <li>导入配置文件</li>
+              </ul>
 
-        </div>
-      </span>
-      <span class="lv1-menu">
-        <span>选择</span>
-        <div class="lv2-menu">
-          <div>全选</div>
-          <div>扩大选区</div>
-          <div>缩小选区</div>
-        </div>
-      </span>
-      <span class="lv1-menu">
-        <span>查看</span>
-        <div class="lv2-menu">
-          <div>命令面板</div>
-          <div>打开视图</div>
-          <hr>
-          <div>外观
-            <div class="lv3-menu">
-              <div>全屏</div>
-              <div>禅模式</div>
-              <div>剧中布局</div>
-            </div>
-          </div>
-          <div>编辑器布局
-            <div class="lv3-menu">
-              <div>向上拆分</div>
-              <div>向下拆分</div>
-              <div>向左拆分</div>
-              <div>向右拆分</div>
-            </div>
-          </div>
-          <hr>
-          <div>资源管理器</div>
-        </div>
-      </span>
-      <span class="lv1-menu">
-        <span>转到</span>
-        <div class="lv2-menu">
+            </li>
+            <li>自动保存</li>
+            <li>首选项
+              <ul>
+                <li>配置文件(默认)
+                  <ul>
+                    <li>默认</li>
+                    <li>显示内容</li>
+                    <li>创建配置文件</li>
+                    <li>删除配置文件</li>
+                    <li>导出配置文件</li>
+                    <li>导入配置文件</li>
+                  </ul>
+                </li>
+                <li>打开设置同步</li>
+              </ul>
+            </li>
+            <li>还原文件</li>
+            <li>关闭编辑器</li>
+            <li>关闭窗口</li>
+            <li>退出</li>
+          </ul>
+        </li>
+        <li>编辑
+          <ul class="lv2-menu">
+            <li>撤销</li>
+            <li>恢复</li>
+            <li>剪切</li>
+            <li>复制</li>
+            <li>复制为
+              <ul>
+                <li>A</li>
+                <li>BB</li>
+                <li>CCC</li>
+              </ul>
+            </li>
+            <li>粘贴</li>
+          </ul>
+        </li>
+        <li>选择
+          <ul>
+            <li>全选</li>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+        <li>查看</li>
+        <li>转到</li>
+        <li>运行</li>
+        <li>终端</li>
+        <li>帮助</li>
+      </ul>
 
-        </div>
-      </span>
-      <span class="lv1-menu">
-        <span>运行</span>
-        <div class="lv2-menu">
-
-        </div>
-      </span>
-      <span class="lv1-menu">
-        <span>终端</span>
-        <div class="lv2-menu">
-
-        </div>
-      </span>
-      <span class="lv1-menu">
-        <span>帮助</span>
-        <div class="lv2-menu">
-
-        </div>
-      </span>
     </div>
-
-
   </div>
-
 
 </body>
 </html>
