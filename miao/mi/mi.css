@@ -17,8 +17,8 @@ ul,li{
 }
 
 div.head{
-  /* padding-left: 5%;
-  padding-right: 5%; */
+  padding-left: 5%;
+  padding-right: 5%;
   height: 42px;
   background-color: rgb(50, 50, 50);
   color: var(--font_c155);
