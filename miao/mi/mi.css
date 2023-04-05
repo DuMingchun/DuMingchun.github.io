@@ -126,7 +126,8 @@ div.page-1{
   margin-right: auto;
   width: 1250px;
   height: 450px;
-  background-color: rgb(255, 239, 220);
+  /* 改背景 */
+  background-color: rgb(177, 124, 59);
 }
 ul.option{
   position: relative;
@@ -160,6 +161,7 @@ ul.option ul{
   height: 450px;
   width: 550px;
   background-color: rgba(235, 137, 137, 0.747);
+  top: 0;
 }
 ul.option ul li{
   vertical-align: top;
