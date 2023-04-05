@@ -12,6 +12,9 @@ html,body{
   height: 100%;
   width: 100%;
 }
+div{
+  height: 100%;
+}
 ul,li{
   list-style: none;
   display: inline-block;
@@ -23,14 +26,23 @@ a{
 a:hover{
   color: var(--font_c230);
 }
+div.head{
+  height: 140px;
+}
+div.h-bgc{
+  height: 40px;
+  background-color: rgb(50, 50, 50);
+}
 /*     head-1     */
 div.head-1{
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 1250px;
   height: 40px;
-  background-color: rgb(50, 50, 50);
   color: var(--font_c155);
+  font-size: 14px;
+  line-height: 40px;
 }
 div.skip-1{
   display: inline-block;
@@ -40,12 +52,18 @@ div.skip-1{
 }
 div.skip-2{
   display: inline-block;
-  text-align: right;
+  position: absolute;
+  right: 140px;
 }
-/* 购物车 */
+/*  购物车  */
 div.Shopping-Cart{
+  position: absolute;
   display: inline-block;
-  text-align: right;
+  background-color: #424242;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  right: 0;
 }
 /*     head-2     */
 div.head-2{
@@ -54,7 +72,6 @@ div.head-2{
   margin-right: auto;
   width: 1250px;
   height: 100px;
-  background-color: rgb(211, 211, 211);
   color: var(--font_c155);
   padding-top: 20px;
   padding-bottom: 20px;
@@ -65,31 +82,87 @@ div.logo{
 }
 div.skip-3{
   display: inline-block;
+  color: black;
   height: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-left: 170px;
+  margin-left: 235px;
+}
+ul.h2-option>li{
+  margin-left: 7px;
+  margin-right: 7px;
 }
 div.skip-3 ul,div.skip-3 li{
   height: 100%;
   text-align: center;
 }
-/*------下面的改--------------------------------*/
+/*  搜索框  */
 div.search_for{
+  position: absolute;
   display: inline-block;
   text-align: right;
+  right: 0;
   width: 300px;
-  margin-right: 0;
-  margin-left: auto;
+  height: 40px;
+  margin: 10px auto;
 }
-
-
-
-
-
-div.aaa{
+div.search_for input{
+  border: 1px solid rgb(50, 50, 50);
+  vertical-align: top;
+  height: 40px;
+  width: 250px;
+}
+label.lb-se{
+  border: 1px solid rgb(50, 50, 50);
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+}
+/*     page页     */
+div.page-1{
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 1250px;
-  background-color: bisque;
+  height: 450px;
+  background-color: rgb(255, 239, 220);
+}
+ul.option{
+  position: relative;
+  width: 235px;
+  height: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: rgba(100, 100, 100, 0.4);
+}
+ul.option>li{
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 40px;
+}
+ul.option>li::after{
+  position: absolute;
+  right: 20px;
+  content: '>';
+}
+ul.option>li:hover{
+  background-color: #FF6A00;
+}
+ul.option>li:hover ul{
+  display: inline-block;
+}
+ul.option ul{
+  position: absolute;
+  display: none;
+  left: 100%;
+  height: 450px;
+  width: 550px;
+  background-color: rgba(235, 137, 137, 0.747);
+}
+ul.option ul li{
+  vertical-align: top;
+  width: 270px;
+  height: 75px;
 }
