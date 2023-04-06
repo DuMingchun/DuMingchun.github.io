@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .lab label{
+    display: inline-block;
+    box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+    border: 3px solid #444444;
+  }
+  .img{
+    height: 400px;
+  }
+  .img img{
+    display: none;
+  }
+  input.rad-1:checked ~.img>img#img-1{
+    display: block;
+  }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="radio">
+    <input type="radio" class="rad-1" id="rad-1" checked>
+    <input type="radio" class="rad-2" id="rad-2">
+    <input type="radio" class="rad-3" id="rad-3">
+    <input type="radio" class="rad-4" id="rad-4">
+  </div>
+  <div class="lab">
+    <label for="rad-1"></label>
+    <label for="rad-2"></label>
+    <label for="rad-3"></label>
+    <label for="rad-4"></label>
+  </div>
+  <div class="img">
+    <img id="img-1"src="https://travel.12306.cn/portal/travel/detail/ff80808157df83c201644427880112ae" alt="">
+    <img id="img-2"src="https://travel.12306.cn/portal/travel/detail/ff80808157df83c20164457aed6012db" alt="">
+    <img id="img-3"src="https://travel.12306.cn/portal/travel/detail/ff80808157df83c201644684cc7c1388" alt="">
+    <img id="img-4"src="https://travel.12306.cn/imgs/resources/uploadfiles/images/506c86b1-3a19-46f8-9382-438fd6a1fab9_product_W572_H370.jpg" alt="">
+  </div>
+
+
+</body>
+</html>
