@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,body{
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .head{
+      height: 100%;
+    }
+    .head>p{
+      margin: 0;
+      height: 120px;
+      box-sizing: border-box;
+      border-bottom: 1px solid;
+      background-color: rgb(190, 187, 181);
+    }
+    .f{
+      float: left;
+      width: 200px;
+      height: calc(100% - 120px);
+      overflow: scroll;
+      background-color: antiquewhite;
+    }
+    .text{
+      display:flow-root;
+      overflow: scroll;
+      height: calc(100% - 120px);
+      box-sizing: border-box;
+      border-left: 1px solid;
+      background-color: bisque;
+    }
+  </style>
+</head>
+<body>
+  <div class="head">
+    <p>ipsum dolor sit amet.</p>
+    <span class="f">
+      <ul>
+        <li>word n</li>
+        <li>word n</li>
+        <li>word n</li>
+        <li>word n</li>
+      </ul>
+    </span>
+    <span class="text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi suscipit possimus hic explicabo. Eveniet officia necessitatibus quis, optio explicabo consectetur eaque a voluptatibus odio sint fugiat facilis amet quisquam quo!
+    </span>
+  </div>
+
+
+</body>
+</html>
