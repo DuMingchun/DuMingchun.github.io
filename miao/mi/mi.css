@@ -149,9 +149,6 @@ div.label-2,div.label-3{
   height: 70px;
   width: 45px;
 }
-div.label-2:hover,div.label-3:hover{
-  background-color: rgba(100, 100, 100, 0.4);
-}
 div.label-1{
   position: relative;
   right: -1170px;
@@ -163,7 +160,7 @@ div.label-2{
   top: -280px;
 }
 div.label-3{
-  right: -1205px;
+  right: -1210px;
   top: -350px;
 }
 div.label-1 label{
@@ -175,17 +172,28 @@ div.label-1 label{
   border-radius: 10px;
   border: 1px solid;
 }
+/* 左右箭头 */
 div.label-2 label{
   height: 70px;
-  width: 45px;
-  border: 1px solid;
+  width: 40px;
+  /* border: 1px solid; */
   display: none;
+  background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+  background-position: -84px
 }
 div.label-3 label{
   height: 70px;
-  width: 45px;
-  border: 1px solid;
+  width: 40px;
+  /* border: 1px solid; */
   display: none;
+  background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+  background-position: -126px
+}
+div.label-2 label:hover{
+  background-position: 0px
+}
+div.label-3 label:hover{
+  background-position: -44px
 }
 input#rad-1:checked ~.label-2 label.lab-3,input#rad-2:checked ~.label-2 label.lab-1,input#rad-3:checked ~.label-2 label.lab-2{
   display: inline-block;
@@ -251,6 +259,7 @@ ul.option ul li{
   margin-left: auto;
   margin-right: auto;
   width: 1250px;
+  height: auto;
 }
 .channel-list{
   position: relative;
@@ -282,17 +291,78 @@ ul.option ul li{
   display: inline-block;
   height: 160px;
   width: 1000px;
+  margin-left: 5px;
 }
 .channel-list2 span{
   display: inline-block;
   height: 160px;
-  width: 330px;
-  border: 1px solid;
+  width: 320px;
+  margin-left: 10px;
+}
+.channel-list2 span:hover{
+  box-shadow: 5px 8px 10px rgba(100, 100, 100, 0.4);
 }
 .channel-list2 span a{
   display: inline-block;
 
 }
 .channel-list2 span img{
-  height: 158px;  /*  */
+  height: 158px;
+}
+/*-------------------------------------*/
+div.page-main{
+  background-color: rgb(245,245,245);
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.content{
+  margin-left: auto;
+  margin-right: auto;
+  width: 1250px;
+  padding-top: 20px;
+}
+.advertisement img{
+  width: 1250px;
+}
+/*     手机     */
+.sj-h{
+  position: relative;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.sj-h a{
+  position: absolute;
+  right: 0;
+}
+.sj-h a:hover{
+  color: #FF6A00;
+}
+.sj-h a::after{
+  content: '>';
+}
+.sj-content{
+  box-shadow: inset 0 0 1px black;
+  font-size: 0;
+}
+.sj-content ul{
+  width: 100%;
+  height: 614px;
+}
+.sj-content ul li{
+  width: 242px;
+  height: 302px;
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  box-shadow: inset 0 0 1px black;
+}
+.sj-content ul li:first-child{
+  width: 242px;
+  height: 614px;
+  margin-left: 0px;
+  margin-bottom: 0px;
 }
