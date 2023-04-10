@@ -13,57 +13,32 @@
     table{
       Xborder-collapse:collapse;
       border-spacing: 0px;
-      border: 5px solid black;
-    }
-    tbody{
-      position: relative;
-
+      border: 3px solid black;
     }
     td{
       width: 50px;
       height: 50px;
-      border: 5px solid black;
+      border: 3px solid black;
       text-align: center;
       padding: 0;
     }
-    tr{
-      border: 5px solid red;
-    }
     td:hover{
-      border: 5px solid red;
-      outline: 5px solid red;
-    }
-    tr:has(td:hover){
-      border: 5px solid red;
+      border: 3px solid red;
+      outline: 3px solid red;
     }
 
-
-
+    tr:has(td:nth-child(2):hover) td:first-child,
     tr:has(td:last-child:hover) td:nth-child(2){
-      border-right: 5px solid red;
+      border-right: 3px solid red;
     }
-    tr:has(td:nth-child(2):hover) td:first-child{
-      border-right: 5px solid red;
-    }
-    table:has(.t3 :first-child:hover) .t2 :first-child{
-      border-bottom: 5px solid red;
-    }
-    table:has(.t2 :first-child:hover) .t1 :first-child{
-      border-bottom: 5px solid red;
-    }
-    table:has(.t3 :nth-child(2):hover) .t2 :nth-child(2){
-      border-bottom: 5px solid red;
-    }
-    table:has(.t2 :nth-child(2):hover) .t1 :nth-child(2){
-      border-bottom: 5px solid red;
-    }
-    table:has(.t3 :last-child:hover) .t2 :last-child{
-      border-bottom: 5px solid red;
-    }
+    table:has(.t3 :first-child:hover) .t2 :first-child,
+    table:has(.t3 :nth-child(2):hover) .t2 :nth-child(2),
+    table:has(.t3 :last-child:hover) .t2 :last-child,
+    table:has(.t2 :first-child:hover) .t1 :first-child,
+    table:has(.t2 :nth-child(2):hover) .t1 :nth-child(2),
     table:has(.t2 :last-child:hover) .t1 :last-child{
-      border-bottom: 5px solid red;
+      border-bottom: 3px solid red;
     }
-
 
   </style>
 </head>
