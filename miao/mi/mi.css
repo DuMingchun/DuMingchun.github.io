@@ -390,3 +390,18 @@ div.page-main{
 .commodity ul li:hover{
   box-shadow: 5px 8px 10px rgba(100, 100, 100, 0.4);
 }
+/*----------*/
+.zncd-h{
+  position: relative;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.zncd-h span{
+  position: absolute;
+  right: 0;
+}
+.zncd-h a:hover{
+  color: #FF6A00;
+}
