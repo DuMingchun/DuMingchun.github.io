@@ -4,8 +4,11 @@ body {
   height: 100%;
   margin: 0;
 }
-div {
-  box-shadow: inset 0 0 3px red;
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .head {
   height: 140px;
@@ -13,16 +16,19 @@ div {
 .head * {
   color: #979797;
 }
-.head .h-bgc {
+.head .head-1 {
   background-color: #333333;
   height: 40px;
   padding-left: 10%;
   padding-right: 10%;
 }
-.head .head-1 {
-  background-color: #333333;
-  height: 40px;
-}
 .head .head-1 > div {
+  display: inline-block;
+}
+.head .head-2 {
+  height: 60px;
+  padding: 20px 10%;
+}
+.head .head-2 * {
   display: inline-block;
 }
