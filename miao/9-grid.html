@@ -11,22 +11,23 @@
       height: 100%;
     }
     table{
-      Xborder-collapse:collapse;
+      border-collapse:collapse;
       border-spacing: 0px;
-      border: 3px solid black;
+      border: 5px solid black;
+    }
+    tr,col{
+      border: 5px solid black;
     }
     td{
       width: 50px;
       height: 50px;
-      border: 3px solid black;
       text-align: center;
       padding: 0;
     }
     td:hover{
-      border: 3px solid red;
-      outline: 3px solid red;
+      border: 5px solid red;
     }
-    tr:has(td:nth-child(2):hover) td:first-child,
+    /* tr:has(td:nth-child(2):hover) td:first-child,
     tr:has(td:last-child:hover) td:nth-child(2){
       border-right: 3px solid red;
     }
@@ -37,13 +38,16 @@
     table:has(.t2 :nth-child(2):hover) .t1 :nth-child(2),
     table:has(.t2 :last-child:hover) .t1 :last-child{
       border-bottom: 3px solid red;
-    }
+    } */
 
   </style>
 </head>
 <body>
   <div>
     <table>
+      <col>
+      <col>
+      <col>
       <tbody>
         <tr class="t1">
           <td>1</td>
