@@ -39,33 +39,66 @@
     table:has(.t2 :last-child:hover) .t1 :last-child{
       border-bottom: 3px solid red;
     } */
+    div ul{
+      overflow: hidden;
+      padding: 0px 0px 5px 0px;
+      width: 170px;
+      background-color: rgba(100, 100, 100, 0.3);
+
+    }
+    div li{
+      position: relative;
+      list-style: none;
+      float: left;
+      width: 50px;
+      height: 50px;
+      border: 5px solid black;
+      margin-right: -5px ;
+      margin-bottom: -5px ;
+    }
+    div li:hover{
+      border: 5px solid red;
+      z-index: 2;
+    }
 
   </style>
 </head>
 <body>
+
+  <table>
+    <col>
+    <col>
+    <col>
+    <tbody>
+      <tr class="t1">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr class="t2">
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr class="t3">
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </tbody>
+  </table>
   <div>
-    <table>
-      <col>
-      <col>
-      <col>
-      <tbody>
-        <tr class="t1">
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-        </tr>
-        <tr class="t2">
-          <td>4</td>
-          <td>5</td>
-          <td>6</td>
-        </tr>
-        <tr class="t3">
-          <td>7</td>
-          <td>8</td>
-          <td>9</td>
-        </tr>
-      </tbody>
-    </table>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+    </ul>
   </div>
 </body>
 </html>
