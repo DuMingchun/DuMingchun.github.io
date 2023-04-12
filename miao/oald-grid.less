@@ -1,0 +1,40 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.main{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 240px auto 240px 240px ;
+}
+.l,.r1,.r2{
+  background-color: rgb(221, 171, 221);
+}
+.l{
+  border-right: 1px solid;
+}
+.r1,.r2{
+  border-left: 1px solid;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  .head{
+    height: 120px;
+    width: 100%;
+    flex-grow: 0;
+    background-color: rgb(146, 142, 146);
+    border-bottom: 1px solid;
+  }
+  .a{
+    overflow-y: scroll;
+    background-color: aquamarine;
+    height: 1px;
+    width: 100%;
+    flex-grow: 1;
+  }
+}
