@@ -1,0 +1,31 @@
+div{
+  display: inline-block;
+
+  *{
+    margin: 0;
+    padding: 0;
+
+  }
+}
+.dd{
+  display: grid;
+  grid-template-columns: 200px repeat(3,200px);
+  grid-template-rows: 30px;
+  grid-auto-rows: 30px;
+}
+
+dl{
+  display: grid;
+  grid-template-columns: 50px 200px;
+  grid-template-rows: repeat(3,auto);
+
+  dt{
+
+    grid-column: 1 / auto;
+    grid-row: auto / span 1;
+  }
+  dd{
+    background-color: rgba(100, 100, 100, 0.5);
+    border-bottom: 1px solid black;
+  }
+}
