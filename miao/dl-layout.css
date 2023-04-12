@@ -5,7 +5,7 @@ div * {
   margin: 0;
   padding: 0;
 }
-.dd {
+.gr {
   display: grid;
   grid-template-columns: 200px repeat(3, 200px);
   grid-template-rows: 30px;
@@ -13,12 +13,8 @@ div * {
 }
 dl {
   display: grid;
-  grid-template-columns: 50px 200px;
+  grid-template-columns: 50px auto;
   grid-template-rows: repeat(3, auto);
-}
-dl dt {
-  grid-column: 1 / auto;
-  grid-row: auto / span 1;
 }
 dl dd {
   background-color: rgba(100, 100, 100, 0.5);
