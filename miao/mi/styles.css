@@ -84,6 +84,9 @@ a {
   margin-left: 10px;
   margin-right: 5px;
 }
+.head .head-2 .skip-3 ul li:hover {
+  color: #FF6700;
+}
 .head .head-2 .search_for {
   float: right;
   height: 50px;
@@ -148,6 +151,12 @@ a {
   height: 42px;
   padding-left: 30px;
   color: #dfdfdf;
+}
+.menu-1 > ul.menu-1-left li.left span {
+  color: #222222;
+}
+.menu-1 > ul.menu-1-left li.left span:hover {
+  color: #FF6700;
 }
 .menu-1 > ul.menu-1-left li.left::after {
   position: absolute;
