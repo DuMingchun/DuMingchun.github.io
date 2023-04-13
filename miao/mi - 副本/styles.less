@@ -50,7 +50,7 @@ div{
     }
     .skip-3{
       padding: 20px;
-      vertical-align: top;
+      vertical-align: top
     }
     .search_for{
       height: 60px;
@@ -80,7 +80,6 @@ div{
       height: 42px;
       padding-left: 30px;
 
-
       &::after{
         position: absolute;
         right: 20px;
@@ -88,18 +87,38 @@ div{
       }
       &:hover{
         background-color: rgb(255,103,0,);
-        ul{
-          display: block;
+        div{
+          display: grid;
+          height: 460px;
+          grid-auto-flow: column;
+          grid-template-rows: repeat(6 ,1fr);
+          grid-auto-columns: 248px;
+
+          span{
+            display: inline-block;
+            line-height: 76px;
+            padding-left: 30px;
+            vertical-align: middle;
+
+            &::before{
+              content: "";
+              display: inline-block;
+              vertical-align: middle;
+              width: 40px;
+              height: 40px;
+              margin-top: 18px;
+              margin-bottom: 18px;
+              background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=40&h=40&f=webp&q=90);
+            }
+          }
         }
       }
 
-      ul{
+      div{
         display: none;
         position: absolute;
         top: 0;
         left: 100%;
-        height: 460px;
-        width: 234px;    /*<<<----------------*/
         background-color: rgb(255, 255, 255);
         box-shadow: 2px 5px 5px rgba(50, 50, 50, 0.2);
       }
@@ -115,12 +134,15 @@ div{
     .pic-bg{
       input{
         display: none;
-        &#rad-1:checked ~div img#pic-1{
+
+        &#rad-1:checked ~div img#pic-1,
+        &#rad-2:checked ~div img#pic-2,
+        &#rad-3:checked ~div img#pic-3{
           display: block;
         }
+
       }
     }
-
     .img{
       position: relative;
       height: 100%;
@@ -144,10 +166,11 @@ div{
         width: 20px;
         border-radius: 10px;
         border: 1px solid;
+
+        &:hover{
+          background-color: coral;
+        }
       }
-
-
-
 
     }
   }

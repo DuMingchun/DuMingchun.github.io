@@ -86,17 +86,34 @@ div {
 .menu-1 > ul.menu-1-left li.left:hover {
   background-color: #ff6700;
 }
-.menu-1 > ul.menu-1-left li.left:hover ul {
-  display: block;
+.menu-1 > ul.menu-1-left li.left:hover div {
+  display: grid;
+  height: 460px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(6, 1fr);
+  grid-auto-columns: 248px;
 }
-.menu-1 > ul.menu-1-left li.left ul {
+.menu-1 > ul.menu-1-left li.left:hover div span {
+  display: inline-block;
+  line-height: 76px;
+  padding-left: 30px;
+  vertical-align: middle;
+}
+.menu-1 > ul.menu-1-left li.left:hover div span::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=40&h=40&f=webp&q=90);
+}
+.menu-1 > ul.menu-1-left li.left div {
   display: none;
   position: absolute;
   top: 0;
   left: 100%;
-  height: 460px;
-  width: 234px;
-  /*<<<----------------*/
   background-color: #ffffff;
   box-shadow: 2px 5px 5px rgba(50, 50, 50, 0.2);
 }
@@ -110,7 +127,9 @@ div {
 .menu-1 .pic .pic-bg input {
   display: none;
 }
-.menu-1 .pic .pic-bg input#rad-1:checked ~ div img#pic-1 {
+.menu-1 .pic .pic-bg input#rad-1:checked ~ div img#pic-1,
+.menu-1 .pic .pic-bg input#rad-2:checked ~ div img#pic-2,
+.menu-1 .pic .pic-bg input#rad-3:checked ~ div img#pic-3 {
   display: block;
 }
 .menu-1 .pic .img {
@@ -135,4 +154,7 @@ div {
   width: 20px;
   border-radius: 10px;
   border: 1px solid;
+}
+.menu-1 .pic .label label:hover {
+  background-color: coral;
 }

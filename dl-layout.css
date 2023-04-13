@@ -8,15 +8,13 @@ div * {
 dl {
   display: grid;
   grid-template-columns: repeat(6, 50px);
-  Xgrid-auto-rows: 30px;
+  grid-auto-rows: 30px;
   margin-left: 50px;
-  text-align: center;
-}
-dl dt {
-  grid-column: 1 / auto;
-  grid-row: auto / span 8;
 }
 dl dd {
   background-color: rgba(100, 100, 100, 0.5);
   border-bottom: 1px solid black;
+}
+dd:nth-child(23) {
+  background-color: black;
 }
