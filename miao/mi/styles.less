@@ -51,6 +51,14 @@ a{
       height: 40px;
       text-align: center;
       background-color: rgb(66, 66, 66);
+
+      .iconfont{
+        font-size: 14px;
+      }
+      .iconfont::before{
+        content: "\E60C";
+        font-size: 14px;
+      }
     }
     .skip-2{
       margin-left: 120px;
@@ -444,6 +452,40 @@ input#rad-3:checked ~.p-img img#img-3{
   }
 
 }
+
+////////////////////////////////////////////////
+.g-head{
+  height: 60px;
+
+  span{
+    line-height: 60px;
+    font-size: 24px;
+  }
+  .select{
+    display: block;
+    width: 280px;
+    height: 60px;
+    float: right;
+    text-align: right;
+
+    *{
+      line-height: 60px;
+    }
+    a:hover{
+      color: #FF6700;
+    }
+    a::after{
+      content: "\E623";
+      font-size: 16px;
+    }
+  }
+}
+
+
+
+
+
+/////////////////////////////////////////////////////////
 .foot{
 
   .container{
@@ -475,6 +517,4 @@ input#rad-3:checked ~.p-img img#img-3{
     margin: auto;
   }
 }
-.g-head{
-  height: 60px;
-}
+

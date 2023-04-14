@@ -55,6 +55,13 @@ a {
   text-align: center;
   background-color: #424242;
 }
+.head .head-1 .Shopping-Cart .iconfont {
+  font-size: 14px;
+}
+.head .head-1 .Shopping-Cart .iconfont::before {
+  content: "\E60C";
+  font-size: 14px;
+}
 .head .head-1 .skip-2 {
   margin-left: 120px;
 }
@@ -395,6 +402,30 @@ input#rad-3:checked ~ .p-img img#img-3 {
 .MAIN .main div div.grid3 span:nth-last-child(-n + 2) {
   grid-row-end: span 1;
 }
+.g-head {
+  height: 60px;
+}
+.g-head span {
+  line-height: 60px;
+  font-size: 24px;
+}
+.g-head .select {
+  display: block;
+  width: 280px;
+  height: 60px;
+  float: right;
+  text-align: right;
+}
+.g-head .select * {
+  line-height: 60px;
+}
+.g-head .select a:hover {
+  color: #FF6700;
+}
+.g-head .select a::after {
+  content: "\E623";
+  font-size: 16px;
+}
 .foot .container {
   width: 1226px;
   margin: auto;
@@ -420,7 +451,4 @@ input#rad-3:checked ~ .p-img img#img-3 {
   height: 270px;
   width: 1226px;
   margin: auto;
-}
-.g-head {
-  height: 60px;
 }
