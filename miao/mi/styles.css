@@ -23,7 +23,7 @@ a {
   color: #e6e6e6;
 }
 .shadow:hover {
-  box-shadow: 7px 7px 7px #979797;
+  box-shadow: 3px 7px 10px 10px rgba(151, 151, 151, 0.219);
 }
 .head {
   height: 140px;
@@ -70,6 +70,9 @@ a {
 }
 .head .head-2 .logo {
   height: 60px;
+}
+.head .head-2 .logo:active {
+  transform: scale(0.8);
 }
 .head .head-2 .skip-3 {
   vertical-align: top;
@@ -202,6 +205,9 @@ a {
   width: 100%;
   position: relative;
   top: -100%;
+}
+.menu-1 .pic .pic-bg {
+  height: 460px;
 }
 .menu-1 .pic .pic-bg input {
   display: none;
@@ -366,7 +372,6 @@ input#rad-3:checked ~ .p-img img#img-3 {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 143px);
   gap: 14px;
-  margin-top: 30px;
   margin-bottom: 30px;
 }
 .MAIN .main div div[class^="grid"] span {
@@ -415,4 +420,7 @@ input#rad-3:checked ~ .p-img img#img-3 {
   height: 270px;
   width: 1226px;
   margin: auto;
+}
+.g-head {
+  height: 60px;
 }

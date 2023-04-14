@@ -20,7 +20,7 @@ a{
   color: rgb(230, 230, 230);
 }
 .shadow:hover{
-  box-shadow: 7px 7px 7px rgb(151, 151, 151);
+  box-shadow: 3px 7px 10px 10px rgba(151, 151, 151, 0.219);
 }
 .head{
   height: 140px;
@@ -69,6 +69,9 @@ a{
     /*   第二行   */
     .logo{
       height: 60px;
+      &:active{
+        transform: scale(0.8);
+      }
     }
     .skip-3{
       vertical-align: top;
@@ -220,6 +223,7 @@ a{
     // z-index: 1;
     top: -100%;
     .pic-bg{
+      height: 460px;
       input{
         display: none;
 
@@ -407,7 +411,6 @@ input#rad-3:checked ~.p-img img#img-3{
         grid-template-columns: repeat(5 , 1fr);
         grid-template-rows: repeat(4 , 143px);
         gap: 14px;
-        margin-top: 30px;      ////////////////////////
         margin-bottom: 30px;   ////////////////////////
         span{
           grid-row-end: span 2;
@@ -471,4 +474,7 @@ input#rad-3:checked ~.p-img img#img-3{
     width: 1226px;
     margin: auto;
   }
+}
+.g-head{
+  height: 60px;
 }
