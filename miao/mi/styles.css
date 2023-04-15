@@ -91,10 +91,16 @@ a {
 }
 .head .head-2 {
   height: 60px;
-  width: 1226px;
-  margin: 20px auto;
+  width: 100%;
+  margin: 20px 0px;
   position: relative;
   /*   第二行   */
+}
+.head .head-2 .head-2-w {
+  display: block;
+  width: 1226px;
+  height: 60px;
+  margin: 0 auto;
 }
 .head .head-2 * {
   display: inline-block;
@@ -108,32 +114,52 @@ a {
 .head .head-2 .skip-3 {
   vertical-align: top;
   margin: auto;
-  padding: 20px;
+  height: 60px;
   width: 800px;
 }
 .head .head-2 .skip-3 ul.h2-option {
   padding-left: 150px;
+  height: 60px;
+  font-size: 0;
 }
 .head .head-2 .skip-3 ul.h2-option li {
-  margin-left: 10px;
-  margin-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 60px;
+  font-size: 16px;
   color: black;
 }
 .head .head-2 .skip-3 ul.h2-option li:hover {
   color: #FF6700;
 }
 .head .head-2 .skip-3 ul.h2-option li:hover div {
+  display: block;
+  width: 100%;
   height: 230px;
-  box-shadow: 0px 3px 3px #919191;
+  margin: auto;
+  z-index: 5;
+  transition: 0.2s;
   border-top: 1px solid #c2c2c2;
-  z-index: 3;
 }
 .head .head-2 .skip-3 ul.h2-option li div {
+  display: block;
   position: absolute;
   height: 0px;
   width: 100%;
+  margin: auto;
   left: 0;
   top: 80px;
+  background-color: #ffffff;
+  z-index: 4;
+  transition: 0.3s 0.2s;
+  overflow: hidden;
+  border-top: 1px solid #ffffff;
+}
+.head .head-2 .skip-3 ul.h2-option li div span {
+  display: block;
+  height: 0px;
+  width: 1226px;
+  margin: auto;
   background-color: white;
 }
 .head .head-2 .search_for {
@@ -257,7 +283,7 @@ a {
   top: 0;
   left: 100%;
   background-color: #ffffff;
-  box-shadow: 2px 5px 5px rgba(50, 50, 50, 0.2);
+  box-shadow: 2px 3px 7px rgba(50, 50, 50, 0.2);
 }
 .menu-1 .pic {
   height: 100%;
