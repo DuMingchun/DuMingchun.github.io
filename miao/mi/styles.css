@@ -17,10 +17,10 @@ a {
 }
 a {
   text-decoration: none;
-  color: #979797;
+  color: #b0b0b0;
 }
 .head a:hover {
-  color: #e6e6e6;
+  color: #f1f1f1;
 }
 .shadow:hover {
   box-shadow: 3px 7px 10px 10px rgba(151, 151, 151, 0.219);
@@ -29,7 +29,7 @@ a {
   height: 140px;
 }
 .head * {
-  color: #979797;
+  color: #b0b0b0;
   font-family: "Microsoft YaHei", "微软雅黑", "MicrosoftJhengHei", sans-serif;
 }
 .head .bgc {
@@ -43,7 +43,12 @@ a {
   height: 40px;
   width: 1226px;
   margin: auto;
-  font-size: 14px;
+  font-size: 12px;
+}
+.head .head-1 span {
+  margin-left: 3px;
+  margin-right: 3px;
+  color: #424242;
 }
 .head .head-1 > div {
   display: inline-block;
@@ -63,7 +68,26 @@ a {
   font-size: 14px;
 }
 .head .head-1 .skip-2 {
-  margin-left: 120px;
+  margin-left: 150px;
+}
+.head .head-1 .Shopping-Cart {
+  position: relative;
+}
+.head .head-1 .Shopping-Cart:hover .Shopping {
+  height: 100px;
+  transition: 0.4s;
+  box-shadow: 2px 2px 5px #919191;
+}
+.head .head-1 .Shopping-Cart .Shopping {
+  position: absolute;
+  height: 0px;
+  width: 315px;
+  right: 0;
+  top: 40px;
+  z-index: 1;
+  background-color: white;
+  text-align: center;
+  transition: 0.4s;
 }
 .head .head-2 {
   height: 60px;
@@ -87,15 +111,30 @@ a {
   padding: 20px;
   width: 800px;
 }
-.head .head-2 .skip-3 ul {
+.head .head-2 .skip-3 ul.h2-option {
   padding-left: 150px;
 }
-.head .head-2 .skip-3 ul li {
+.head .head-2 .skip-3 ul.h2-option li {
   margin-left: 10px;
   margin-right: 5px;
+  color: black;
 }
-.head .head-2 .skip-3 ul li:hover {
+.head .head-2 .skip-3 ul.h2-option li:hover {
   color: #FF6700;
+}
+.head .head-2 .skip-3 ul.h2-option li:hover div {
+  height: 230px;
+  box-shadow: 0px 3px 3px #919191;
+  border-top: 1px solid #c2c2c2;
+  z-index: 3;
+}
+.head .head-2 .skip-3 ul.h2-option li div {
+  position: absolute;
+  height: 0px;
+  width: 100%;
+  left: 0;
+  top: 80px;
+  background-color: white;
 }
 .head .head-2 .search_for {
   float: right;
@@ -103,7 +142,19 @@ a {
   width: 300px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border: 1px solid #525252;
+  border: 1px solid #e0e0e0;
+}
+.head .head-2 .search_for:hover {
+  border-color: #b0b0b0;
+}
+.head .head-2 .search_for:hover label {
+  border-color: #b0b0b0;
+}
+.head .head-2 .search_for:active {
+  border-color: #FF6700;
+}
+.head .head-2 .search_for:active label {
+  border-color: #FF6700;
 }
 .head .head-2 .search_for form {
   width: 100%;
@@ -118,13 +169,13 @@ a {
   margin: 0;
   padding: 0;
   padding-left: 10px;
-  border: 0px solid #525252;
+  border: 0px;
 }
 .head .head-2 .search_for form label {
   float: right;
   height: 50px;
   width: 50px;
-  border-left: 1px solid;
+  border-left: 1px solid #e0e0e0;
 }
 .head .head-2 .search_for form label :hover {
   background-color: #FF6700;
@@ -160,6 +211,7 @@ a {
   line-height: 42px;
   height: 42px;
   padding-left: 30px;
+  font-size: 14px;
   color: #dfdfdf;
 }
 .menu-1 > ul.menu-1-left li.left span {
@@ -171,7 +223,7 @@ a {
 .menu-1 > ul.menu-1-left li.left::after {
   position: absolute;
   right: 20px;
-  content: ">";
+  content: "\E623";
 }
 .menu-1 > ul.menu-1-left li.left:hover {
   background-color: #ff6700;
