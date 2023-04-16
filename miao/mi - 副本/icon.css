@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "iconfont";
+  src: url(mi-icon-font.ttf);
+}
+.iconfont{
+  font-family: "iconfont" !important;
+  font-size: 18px;
+  font-style: normal;
+}
