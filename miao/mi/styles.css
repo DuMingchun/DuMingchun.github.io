@@ -41,6 +41,12 @@ a {
   text-align: center;
   line-height: 80px;
 }
+.sidebar .sidebar-c a {
+  color: black;
+}
+.sidebar .sidebar-c a:hover {
+  color: #FF6700;
+}
 @media screen and (max-width: 1450px) {
   .sidebar {
     left: 50%;
