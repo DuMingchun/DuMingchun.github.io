@@ -147,6 +147,21 @@ a{
       margin: auto;
       height: 60px;
       width: 800px;
+      .independent{
+        height: 60px;
+        font-size: 0;
+        li{
+          padding-left: 10px;
+          padding-right: 10px;
+          line-height: 60px;
+          font-size: 16px;
+          color: black;
+          &:hover{
+            color: #FF6700;
+          }
+        }
+
+      }
 
       ul.h2-option{
         margin-left: 150px;
@@ -164,7 +179,8 @@ a{
         li{
           padding-left: 10px;
           padding-right: 10px;
-          line-height: 60px;
+          line-height: 100px;
+          margin-top: -40px;
           font-size: 16px;
           color: black;
           &:hover{
@@ -183,8 +199,8 @@ a{
             left: 0;
             top: 80px;
             background-color: rgb(255, 255, 255);
-            z-index: 4;
-            transition: .4s .4s;
+            z-index: 2;
+            transition: .5s .5s;
             overflow: hidden;
             border-top: 1px solid rgb(255, 255, 255);
             // border-bottom: 1px solid rgb(27, 27, 27);
@@ -269,7 +285,7 @@ a{
 
   >ul.menu-1-left{
     position: relative;
-    z-index: 2;
+    z-index: 1;
     box-sizing: border-box;
     height: 460px;
     width: 234px;
