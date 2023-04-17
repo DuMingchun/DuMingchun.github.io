@@ -22,6 +22,37 @@ a{
 .shadow:hover{
   box-shadow: 3px 7px 10px 10px rgba(151, 151, 151, 0.219);
 }
+//////////////////////////////////////////////////
+.sidebar{
+  position: fixed;
+  right: 0;
+  bottom: 60px;
+  height: 400px;
+  width: 80px;
+  background-color: rgba(50, 50, 50, 0.2);
+  .sidebar-c{
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+    border: 1px solid;
+    text-align: center;
+    line-height: 80px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .sidebar{
+  left: 50%;
+  margin-left: calc(1226px / 2);
+  height: 250px;
+  width: 40px;
+  .sidebar-c{
+    width: 40px;
+    height: 50px;
+    line-height: 50px;
+  }
+  }
+}
+//////////////////////////////////////////////////
 .head{
   height: 140px;
 
