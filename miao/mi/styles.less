@@ -495,6 +495,9 @@ input#rad-3:checked ~.p-img img#img-3{
     div{
       div[class ^= "grid"]{
         display: grid;
+        position: relative;
+        z-index: 2;
+        height: 614px;
         grid-template-columns: repeat(5 , 1fr);
         grid-template-rows: repeat(4 , 143px);
         gap: 14px;
@@ -522,6 +525,13 @@ input#rad-3:checked ~.p-img img#img-3{
           grid-row-end: span 1;
         }
       }
+      div.grid2_2{
+        position: absolute;
+        top: -644px;
+        span:first-child{
+          grid-row-end: span 4;
+        }
+      }
       div.grid3{
         span:nth-last-child(-n + 2){
           grid-row-end: span 1;
@@ -529,7 +539,6 @@ input#rad-3:checked ~.p-img img#img-3{
       }
     }
   }
-
 }
 
 ////////////////////////////////////////////////
