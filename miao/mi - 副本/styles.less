@@ -489,7 +489,9 @@ input#rad-3:checked ~.p-img img#img-3{
   .main{
     width: 1226px;
     margin: auto;
-
+    .g-head{
+      position: relative;
+    }
 
     div{
       div[class ^= "grid"]{
@@ -497,6 +499,7 @@ input#rad-3:checked ~.p-img img#img-3{
         grid-template-columns: repeat(5 , 1fr);
         grid-template-rows: repeat(4 , 143px);
         gap: 14px;
+        width: 1226px;
         margin-bottom: 30px;   ////////////////////////
         span{
           grid-row-end: span 2;
@@ -514,6 +517,18 @@ input#rad-3:checked ~.p-img img#img-3{
         }
       }
       div.grid2{
+
+        span:first-child{
+          grid-row-end: span 4;
+        }
+        span:nth-last-child(-n + 2){
+          grid-row-end: span 1;
+        }
+      }
+      div.grid2-2{
+        position: absolute;
+        top: 0;
+        left: 0;
         span:first-child{
           grid-row-end: span 4;
         }

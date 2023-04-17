@@ -450,11 +450,15 @@ input#rad-3:checked ~ .p-img img#img-3 {
   width: 1226px;
   margin: auto;
 }
+.MAIN .main .g-head {
+  position: relative;
+}
 .MAIN .main div div[class^="grid"] {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 143px);
   gap: 14px;
+  width: 1226px;
   margin-bottom: 30px;
 }
 .MAIN .main div div[class^="grid"] span {
@@ -473,6 +477,17 @@ input#rad-3:checked ~ .p-img img#img-3 {
   grid-row-end: span 4;
 }
 .MAIN .main div div.grid2 span:nth-last-child(-n + 2) {
+  grid-row-end: span 1;
+}
+.MAIN .main div div.grid2-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.MAIN .main div div.grid2-2 span:first-child {
+  grid-row-end: span 4;
+}
+.MAIN .main div div.grid2-2 span:nth-last-child(-n + 2) {
   grid-row-end: span 1;
 }
 .MAIN .main div div.grid3 span:nth-last-child(-n + 2) {

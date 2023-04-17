@@ -455,60 +455,93 @@ input#rad-3:checked ~ .p-img img#img-3 {
   width: 1226px;
   margin: auto;
 }
-.MAIN .main div div[class^="grid"] {
+.MAIN .main > div {
+  position: relative;
+}
+.MAIN .main > div .select {
+  height: 30px;
+  width: 156px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.MAIN .main > div .select:hover > * {
+  transition: 0s;
+}
+.MAIN .main > div:has(.select:hover) div[class^="grid"] {
+  transition: 0s;
+}
+.MAIN .main > div:has(.select-2:hover) > div.grid2_2 {
+  z-index: 4;
+  transition: 0s;
+}
+.MAIN .main > div .select-1,
+.MAIN .main > div .select-2 {
+  transition: 0s 99s;
+  padding-left: 30px;
+}
+.MAIN .main > div .select-1:hover {
+  color: #FF6700;
+  transition: 0s;
+}
+.MAIN .main > div .select-2:hover {
+  color: #FF6700;
+  transition: 0s;
+}
+.MAIN .main > div div[class^="grid"] {
   display: grid;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   height: 614px;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 143px);
   gap: 14px;
   margin-bottom: 30px;
 }
-.MAIN .main div div[class^="grid"] span {
+.MAIN .main > div div[class^="grid"] span {
   grid-row-end: span 2;
   background-color: white;
   transition: 0.2s;
   transform: translateY(0);
 }
-.MAIN .main div div[class^="grid"] span:hover {
+.MAIN .main > div div[class^="grid"] span:hover {
   transform: translateY(-2px);
 }
-.MAIN .main div div.grid1 span:first-child {
+.MAIN .main > div div.grid1 span:first-child {
   grid-row-end: span 4;
 }
-.MAIN .main div div.grid2 span:first-child {
+.MAIN .main > div div.grid2 span:first-child {
   grid-row-end: span 4;
 }
-.MAIN .main div div.grid2 span:nth-last-child(-n + 2) {
+.MAIN .main > div div.grid2 span:nth-last-child(-n + 2) {
   grid-row-end: span 1;
 }
-.MAIN .main div div.grid2_2 {
+.MAIN .main > div div.grid2_2 {
   position: absolute;
-  top: -644px;
+  top: 60px;
+  z-index: 2;
+  transition: 0s 99s;
 }
-.MAIN .main div div.grid2_2 span:first-child {
+.MAIN .main > div div.grid2_2 span:first-child {
   grid-row-end: span 4;
 }
-.MAIN .main div div.grid3 span:nth-last-child(-n + 2) {
+.MAIN .main > div div.grid2_2 span:nth-last-child(-n + 2) {
+  grid-row-end: span 1;
+}
+.MAIN .main > div div.grid3 span:nth-last-child(-n + 2) {
   grid-row-end: span 1;
 }
 .g-head {
   height: 60px;
 }
 .g-head span {
-  line-height: 60px;
+  line-height: 30px;
   font-size: 24px;
 }
 .g-head .select {
   display: block;
-  width: 280px;
-  height: 60px;
   float: right;
   text-align: right;
-}
-.g-head .select * {
-  line-height: 60px;
+  font-size: 0;
 }
 .g-head .select a:hover {
   color: #FF6700;
