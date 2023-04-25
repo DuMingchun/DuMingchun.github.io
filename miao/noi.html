@@ -1,0 +1,206 @@
+<script id="ch0103/01">
+  console.log("a+b问题");
+  var a0301 = Number(prompt("03/01输入a的值"));
+  var b0301 = Number(prompt("03/01输入b的值"));
+  var c0301 = a0301 + b0301;
+  console.log("a = " + a0301);
+  console.log("b = " + b0301);
+  console.log(c0301);
+</script>
+
+<script id="ch0103/02">
+  console.log("计算(a+b)*c的值");
+  var a0302 = Number(prompt("03/02输入a的值"));
+  var b0302 = Number(prompt("03/02输入b的值"));
+  var c0302 = Number(prompt("03/02输入c的值"));
+  var d0302 = (a0302 + b0302) * c0302;
+  console.log("a = " + a0302);
+  console.log("b = " + b0302);
+  console.log("c = " + c0302);
+  console.log(d0302);
+</script>
+
+<script id="ch0103/03">
+  console.log("计算(a+b)/c的值");
+  var a0303 = Number(prompt("03/03输入a的值"));
+  var b0303 = Number(prompt("03/03输入b的值"));
+  var c0303 = Number(prompt("03/03输入c的值"));
+  var d0303 = (a0303 + b0303) / c0303;
+  console.log("a = " + a0303);
+  console.log("b = " + b0303);
+  console.log("c = " + c0303);
+  console.log(d0303);
+</script>
+
+<script id="ch0103/04">
+  console.log("带余除法");
+  var a0304 = Number(prompt("03/04输入a的值"));
+  var b0304 = Number(prompt("03/04输入b的值"));
+  var c0304 = Math.trunc(a0304 / b0304);
+  var d0304 = (a0304 % b0304);
+  console.log("a = " + a0304);
+  console.log("b = " + b0304);
+  console.log(c0304 , d0304);
+</script>
+
+<script id="ch0103/05">
+  console.log("计算分数的浮点数值");
+  var a0305 = Number(prompt("03/05输入a的值"));
+  var b0305 = Number(prompt("03/05输入b的值"));
+  var c0305 = a0305 / b0305;
+  console.log(c0305.toFixed(9));
+</script>
+
+<script id="ch0103/06">
+  console.log("甲流疫情死亡率");
+  var a0306 = Number(prompt("03/06输入确诊人数的值"));
+  var b0306 = Number(prompt("03/06输入死亡人数的值"));
+  var c0306 = (b0306 / a0306) * 100;
+  console.log(c0306 + "%");
+</script>
+
+<script id="ch0103/07">
+  console.log("计算多项式的值");
+  var x0307 = Number(prompt("f(x) = ax3 + bx2 + cx + d   请输入 x 的值:"));
+  var a0307 = Number(prompt("f(x) = ax3 + bx2 + cx + d   请输入 a 的值:"));
+  var b0307 = Number(prompt("f(x) = ax3 + bx2 + cx + d   请输入 b 的值:"));
+  var c0307 = Number(prompt("f(x) = ax3 + bx2 + cx + d   请输入 c 的值:"));
+  var d0307 = Number(prompt("f(x) = ax3 + bx2 + cx + d   请输入 d 的值:"));
+  var third = Math.abs(a0307 * (x0307 ** 3));
+  var second = Math.abs(b0307 * (x0307 ** 2));
+  var first = Math.abs(c0307 * x0307);
+  var zero = Math.abs(d0307);
+  console.log((third + second + first + zero).toFixed(7));
+</script>
+
+<script id="ch0103/08">
+  console.log("温度表达转化");
+  var f0308 = Number(prompt("03/08输入华氏度:f 的值(f >= -459.67)"));
+  var c0308 = 5 * (f0308 - 32) / 9;
+  console.log(c0308.toFixed(5));
+</script>
+
+<script id="ch0103/09">
+  console.log("与圆相关的计算");
+  var r0309 = Number(prompt("03/09输入圆的半径:r 的值"));
+  var pi = 3.1415926;
+  var d0309 = r0309 * 2;
+  var C0309 = pi * r0309 * 2;
+  var S0309 = pi * r0309 * r0309;
+  console.log(d0309.toFixed(4) , C0309.toFixed(4) , S0309.toFixed(4));
+</script>
+
+<script id="ch0103/10">
+  console.log("计算并联电阻的阻值");
+  var r1_10 = Number(prompt("03/10输入电阻:r1 的值"));
+  var r2_10 = Number(prompt("03/10输入电阻:r2 的值"));
+  var R0310 = 1 / (1 / r1_10 + 1 / r2_10);
+  console.log(R0310.toFixed(2));
+</script>
+
+<script id="ch0103/11">
+  console.log("计算浮点数相除的余数");
+  var a0311 = (prompt("03/11输入a的值") * 1.0);
+  var b0311 = (prompt("03/11输入b的值") * 1.0);
+  var c0311 = a0311 % b0311;
+  console.log(c0311);
+</script>
+
+<script id="ch0103/12">
+  console.log("计算球的体积");
+  var r0312 = Number(prompt("03/12输入半径r的值"));
+  var pi = 3.14;
+  var V0312 = 4 / 3 * pi * r0312 ** 3;
+  console.log(V0312.toFixed(2));
+</script>
+
+<script id="ch0103/13">
+  console.log("反向输出一个三位数");
+  var n0313 = Number(prompt("03/13输入一个三位数n的值"));
+  var a0313 = Math.trunc(n0313 / 100);
+  var b0313 = (n0313 - (n0313 % 10)) / 10 % 10;
+  var c0313 = n0313 % 10;
+  var sum0313 = (c0313 * 100) + (b0313 * 10) + a0313;
+  console.log(sum0313);
+</script>
+
+<script id="ch0103/14">
+  console.log("大象喝水");
+  var h0314 = Number(prompt("03/14输入桶的深度h的值(单位:厘米)"));
+  var r0314 = Number(prompt("03/14输入桶的底面半径r的值(单位:厘米)"));
+  var pi = 3.14159;
+  var V0314 = (pi * r0314 * r0314 * h0314) / 1000;
+  var a0314 = Math.ceil(20 / V0314);
+  console.log(a0314);
+</script>
+
+<script id="ch0103/15">
+  console.log("苹果和虫子");
+  var n0315 = Number(prompt("03/15输入苹果个数n的值"));
+  var x0315 = Number(prompt("03/15输入虫子吃掉一个苹果的时间x的值"));
+  var y0315 = Number(prompt("03/15输入抓住虫子时耗费的时间y的值"));
+  var eat = Math.ceil(y0315 / x0315);
+  var residue = n0315 - eat;
+  console.log(residue);
+</script>
+
+<script id="ch0103/16">
+  console.log("计算线段长度");
+  var Ax0316 = Number(prompt("03/16输入坐标Ax的值"));
+  var Ay0316 = Number(prompt("03/16输入坐标Ay的值"));
+  var Bx0316 = Number(prompt("03/16输入坐标Bx的值"));
+  var By0316 = Number(prompt("03/16输入坐标By的值"));
+  var X = Math.abs(Ax0316 - Bx0316);
+  var Y = Math.abs(Ay0316 - By0316);
+  var Long = Math.sqrt((X * X) + (Y * Y));
+  console.log(Long.toFixed(3));
+</script>
+
+<script id="ch0103/17">
+  console.log("计算线段长度");
+  var Ax0317 = Number(prompt("03/17输入三角形顶点坐标Ax的值"));
+  var Ay0317 = Number(prompt("03/17输入三角形顶点坐标Ay的值"));
+  var Bx0317 = Number(prompt("03/17输入三角形顶点坐标Bx的值"));
+  var By0317 = Number(prompt("03/17输入三角形顶点坐标By的值"));
+  var Cx0317 = Number(prompt("03/17输入三角形顶点坐标Cx的值"));
+  var Cy0317 = Number(prompt("03/17输入三角形顶点坐标Cy的值"));
+  var X1 = Math.abs(Ax0317 - Bx0317);
+  var Y1 = Math.abs(Ay0317 - By0317);
+  var X2 = Math.abs(Ax0317 - Cx0317);
+  var Y2 = Math.abs(Ay0317 - Cy0317);
+  var X3 = Math.abs(Bx0317 - Cx0317);
+  var Y3 = Math.abs(By0317 - Cy0317);
+  var S = ((X1 * Y1) + (X2 * Y2) + (X3 * Y3)) / 2;  //边角料
+
+  var maxX = X1 > X2 ? X1 : (X2 > X3 ? X2 : X3);
+  var minX = X1 < X2 ? X1 : (X2 < X3 ? X2 : X3);
+  var maxY = Y1 > Y2 ? Y1 : (Y2 > Y3 ? Y2 : Y3);
+  var minY = Y1 < Y2 ? Y1 : (Y2 < Y3 ? Y2 : Y3);
+  var SSSS = (maxX - minX) * (maxY - minY);
+
+  console.log((SSSS - S).toFixed(2));
+</script>
+
+<script id="ch0103/18">
+  console.log("等差数列末项计算");
+  var a0312 = Number(prompt("03/18输入等差数列a1的值"));
+  var b0312 = Number(prompt("03/18输入等差数列a2的值"));
+  var n0312 = Number(prompt("03/18输入等差数列项数n的值"));
+  var price = (b0312 - a0312) * (n0312 - 1) + a0312;
+  console.log(price);
+</script>
+
+<script id="ch0103/19">
+  console.log("A*B问题");
+  var a0319 = Number(prompt("03/19输入a的值"));
+  var b0319 = Number(prompt("03/19输入b的值"));
+  var c0319 = a0319 * b0319;
+  console.log(c0319);
+</script>
+
+<script id="ch0103/20">
+  console.log("计算2的幂");
+  var n0320 = Number(prompt("03/20输入2的次方数n的值"));
+  var c0320 = (2 ** n0320);
+  console.log(c0320);
+</script>
