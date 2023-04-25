@@ -195,16 +195,16 @@
 </script>
 
 <script id="ch0104/04">
-  var n0404 = prompt("04/03输入需要判断ASCII码是奇偶的数字n的值");
+  var n0404 = Number(prompt("04/03输入需要判断ASCII码是奇偶的数字n的值"));
   var ascii = n0404.charCodeAt();
   var a0404 = ascii % 2 == 1 ? "YES" : "NO";
   console.log(a0404);
 </script>
 
 <script id="ch0104/05">
-  var x0405 = Number(prompt("04/05输入两个整数 比较它们的大小 x的值"));
-  var y0405 = Number(prompt("04/05输入两个整数 比较它们的大小 y的值"));
-  var a0405 = (x == y) ? "=" : (x > y ? ">" : "<");
+  var x0405 = Number(prompt("04/05输入两个整数,比较它们的大小x的值"));
+  var y0405 = Number(prompt("04/05输入两个整数,比较它们的大小y的值"));
+  var a0405 = (x0405 == y0405) ? "=" : (x0405 > y0405 ? ">" : "<");
   console.log(a0405);
 </script>
 
