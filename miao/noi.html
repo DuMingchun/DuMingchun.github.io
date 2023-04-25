@@ -18,7 +18,7 @@
   var b0303 = Number(prompt("03/03输入b的值"));
   var c0303 = Number(prompt("03/03输入c的值"));
   var d0303 = (a0303 + b0303) / c0303;
-  console.log(d0303);
+  console.log(Math.trunc(d0303));
 </script>
 
 <script id="ch0103/04">
@@ -64,7 +64,7 @@
 
 <script id="ch0103/09">
   var r0309 = Number(prompt("03/09输入圆的半径:r 的值"));
-  var pi = 3.14;
+  var pi = 3.14159;
   var d0309 = r0309 * 2;
   var C0309 = pi * r0309 * 2;
   var S0309 = pi * r0309 * r0309;
@@ -97,7 +97,7 @@
   var a0313 = Math.trunc(n0313 / 100);
   var b0313 = (n0313 - (n0313 % 10)) / 10 % 10;
   var c0313 = n0313 % 10;
-  var sum0313 = "c0313" + "b0313" + "a0313";
+  var sum0313 = toString(c0313 + b0313 + a0313);
   console.log(sum0313);
 </script>
 
