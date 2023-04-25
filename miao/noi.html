@@ -2,8 +2,6 @@
   var a0301 = Number(prompt("03/01输入a的值"));
   var b0301 = Number(prompt("03/01输入b的值"));
   var c0301 = a0301 + b0301;
-  console.log("a = " + a0301);
-  console.log("b = " + b0301);
   console.log(c0301);
 </script>
 
@@ -12,9 +10,6 @@
   var b0302 = Number(prompt("03/02输入b的值"));
   var c0302 = Number(prompt("03/02输入c的值"));
   var d0302 = (a0302 + b0302) * c0302;
-  console.log("a = " + a0302);
-  console.log("b = " + b0302);
-  console.log("c = " + c0302);
   console.log(d0302);
 </script>
 
@@ -23,9 +18,6 @@
   var b0303 = Number(prompt("03/03输入b的值"));
   var c0303 = Number(prompt("03/03输入c的值"));
   var d0303 = (a0303 + b0303) / c0303;
-  console.log("a = " + a0303);
-  console.log("b = " + b0303);
-  console.log("c = " + c0303);
   console.log(d0303);
 </script>
 
@@ -34,8 +26,6 @@
   var b0304 = Number(prompt("03/04输入b的值"));
   var c0304 = Math.trunc(a0304 / b0304);
   var d0304 = (a0304 % b0304);
-  console.log("a = " + a0304);
-  console.log("b = " + b0304);
   console.log(c0304 , d0304);
 </script>
 
@@ -50,7 +40,7 @@
   var a0306 = Number(prompt("03/06输入确诊人数的值"));
   var b0306 = Number(prompt("03/06输入死亡人数的值"));
   var c0306 = (b0306 / a0306) * 100;
-  console.log(c0306 + "%");
+  console.log(c0306.toFixed(3) + "%");
 </script>
 
 <script id="ch0103/07">
@@ -74,7 +64,7 @@
 
 <script id="ch0103/09">
   var r0309 = Number(prompt("03/09输入圆的半径:r 的值"));
-  var pi = 3.1415926;
+  var pi = 3.14;
   var d0309 = r0309 * 2;
   var C0309 = pi * r0309 * 2;
   var S0309 = pi * r0309 * r0309;
@@ -92,7 +82,7 @@
   var a0311 = (prompt("03/11输入a的值") * 1.0);
   var b0311 = (prompt("03/11输入b的值") * 1.0);
   var c0311 = a0311 % b0311;
-  console.log(c0311);
+  console.log(c0311.toFixed(4));
 </script>
 
 <script id="ch0103/12">
@@ -107,7 +97,7 @@
   var a0313 = Math.trunc(n0313 / 100);
   var b0313 = (n0313 - (n0313 % 10)) / 10 % 10;
   var c0313 = n0313 % 10;
-  var sum0313 = (c0313 * 100) + (b0313 * 10) + a0313;
+  var sum0313 = "c0313" + "b0313" + "a0313";
   console.log(sum0313);
 </script>
 
