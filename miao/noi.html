@@ -173,3 +173,82 @@
   var c0320 = (2 ** n0320);
   console.log(c0320);
 </script>
+
+<!-------------------------------------------------------------->
+<!-------------------------------------------------------------->
+<script id="ch0104/01">
+  var n0401 = Number(prompt("04/01输入需要判断正负的数字n的值"));
+  var a0401 = (n0401 == 0) ? "zero" : (n0401 > 0 ? "positive" : "negative");
+  console.log(a0401);
+</script>
+
+<script id="ch0104/02">
+  var n0402 = Number(prompt("04/02输入需要输出绝对值的数字n的值"));
+  var a0402 = Math.abs(n0402);
+  console.log(a0402);
+</script>
+
+<script id="ch0104/03">
+  var n0403 = Number(prompt("04/03输入需要判断奇偶的数字n的值"));
+  var a0403 = (n0403 % 2) == 0 ? "even" : "odd";
+  console.log(a0403);
+</script>
+
+<script id="ch0104/04">
+  var n0404 = prompt("04/03输入需要判断ASCII码是奇偶的数字n的值");
+  var ascii = n0404.charCodeAt();
+  var a0404 = ascii % 2 == 1 ? "YES" : "NO";
+  console.log(a0404);
+</script>
+
+<script id="ch0104/05">
+  var x0405 = Number(prompt("04/05输入两个整数，比较它们的大小.x的值"));
+  var y0405 = Number(prompt("04/05输入两个整数，比较它们的大小.y的值"));
+  var a0405 = (x == y) ? "=" : (x > y ? ">" : "<");
+  console.log(a0405);
+</script>
+
+<script id="ch0104/06">
+  var x0406 = Number(prompt("04/06输入一个正整数x的值"));
+  var a0406 = Math.trunc(x0406 / 10);
+  var t0406 = (a0406 == 0) ? "0" : "1";
+  console.log(t0406);
+</script>
+
+<script id="ch0104/07">
+  var x0407 = Number(prompt("04/07输入拥有\"幸运\" x的值"));
+  var y0407 = Number(prompt("04/07输入拥有\"鼓励\" y的值"));
+  var a0407 = (x0407 >= 10 || y0407 >= 20) ? "1" : "0";
+  console.log(a0407);
+</script>
+
+<script id="ch0104/08">
+  var x0408 = Number(prompt("04/08判断输入的值:x 能否同时被3和5整除"));
+  var a0408 = (x0408 % 3 == 0 && x0408 % 5 == 0) ? "YES" : "NO";
+  console.log(a0408);
+</script>
+
+<script id="ch0104/09">
+  var x0409 = Number(prompt("04/08判断输入的值:x 能否被3,5,7整除"));
+  var a0409 = (x0409 % 3 ) ? "3" : "";
+  var b0409 = (x0409 % 5 ) ? "5" : "";
+  var c0409 = (x0409 % 7 ) ? "7" : "";
+  var d0409 = (x0409 % 3 !== 0 && x0409 % 5 !== 0 && x0409 % 7 !== 0) ? "n" :
+  ((x0409 % 3 == 0 && x0409 % 5 == 0 && x0409 % 7 == 0) ? "3 5 7" :
+  ((x0409 % 5 == 0 && x0409 % 7 == 0) ? "5 7" :
+  ((x0409 % 3 == 0 && x0409 % 7 == 0) ? "3 7" :
+  ((x0409 % 3 == 0 && x0409 % 5 == 0) ? "3 5" :
+  (x0409 % 7 == 0 ? "7" :
+  (x0409 % 5 == 0 ? "5" :
+  (x0409 % 3 == 0 ? "3" : "n")))))));
+
+  console.log(d0409);
+</script>
+
+<script id="ch0104/10">
+  var x0410 = Number(prompt("04/08判断恰好有一门课程不及格 语文:x"));
+  var y0410 = Number(prompt("04/08判断恰好有一门课程不及格 数学:y"));
+  //异或运算
+  var a0410 = (x0410 < 60 ^ y0410 < 60) ? "1" : "0";
+  console.log(a0410);
+</script>
