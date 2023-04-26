@@ -252,3 +252,120 @@
   var a0410 = (x0410 < 60 ^ y0410 < 60) ? "1" : "0";
   console.log(a0410);
 </script>
+
+<!-------------------------------------------------------------->
+<!-------------------------------------------------------------->
+<script id="ch0104/11">
+  var x0411 = Number(prompt("04/11输入一起去看展览的星期x"));
+  var y0411 = (x0411 == 1 || x0411 == 3 || x0411 == 5) ? "NO" : "YES";
+  console.log(y0411);
+</script>
+
+<script id="ch0104/12">
+  var x0412 = Number(prompt("04/12输入一次办事要行走的距离x"));
+  var lock = (27 + 23) * 1.2;
+  var t0412 = x0412 / 3 < (x0412 - lock) / 1.2 ? "Bike" : "Walk";
+  console.log(t0412);
+</script>
+
+<script id="ch0104/13">
+  var x0413 = Number(prompt("04/13输入y=f(x)的值x"));
+  var y0413 = (x0413 >= 0 && x0413 < 5) ? -x0413 + 2.5 : ((x0413 >= 5 && x0413 < 10) ? 2 - 1.5 * (x0413 - 3) * (x0413 - 3) : x0413 / 2 - 1.5);
+  console.log(y0413.toFixed(3));
+</script>
+
+<script id="ch0104/14">
+  var w0414 = Number(prompt("04/14输入重量w(单位为克)"));
+  var x0414 = prompt("04/14输入是否加急 加急:y 不加急:n");
+  var a0414 = w0414 < 1000 ? 8 : Math.ceil(w0414 / 500) * 4;
+  var b0414 = x0414 === 'y' ? a0414 + 5 : a0414;
+  console.log(b0414);
+</script>
+
+<script id="ch0104/15">
+  var a0415 = Number(prompt("04/15输入数字a的值"));
+  var b0415 = Number(prompt("04/15输入数字b的值"));
+  var c0415 = Number(prompt("04/15输入数字c的值"));
+  var d0415 = a0415 <= b0415 ? (b0415 <= c0415 ? c0415 : b0415) : (a0415 <= c0415 ? c0415 : a0415);
+  console.log(d0415);
+</script>
+
+<script id="ch0104/16">
+  var a0416 = Number(prompt("04/16输入线段长度a的值"));
+  var b0416 = Number(prompt("04/16输入线段长度b的值"));
+  var c0416 = Number(prompt("04/16输入线段长度c的值"));
+  if(a0416 < b0416 + c0416 && b0416 < a0416 + c0416 && c0416 < a0416 + b0416){
+    console.log("yes");
+  }
+  else{
+    console.log("no");
+  }
+</script>
+
+<script id="ch0104/17">
+  var a0417 = Number(prompt("04/17输入年份a的值"));
+  if(a0417 % 3200 == 0 || (a0417 % 400 !== 0 && a0417 % 100 == 0) || a0417 % 4 !== 0){
+    console.log("no");
+  }
+  else{
+    console.log("yes");
+  }
+</script>
+
+<script id="ch0104/18">
+  var x0418 = Number(prompt("04/18输入坐标x的值"));
+  var y0418 = Number(prompt("04/18输入坐标y的值"));
+  if(Math.abs(x0418) > 1 || Math.abs(y0418) > 1){
+    console.log("no");
+  }
+  else{
+    console.log("yes");
+  }
+</script>
+
+<script id="ch0104/19">
+  var x0419 = Number(prompt("04/19输入x的值"));
+  var y0419 = Number(prompt("04/19输入y的值"));
+  var A0419 = prompt("04/19输入操作符");
+  switch(A0419){
+    case "+" :
+      console.log(x0419 + y0419);
+      break;
+    case "-" :
+      console.log(x0419 - y0419);
+      break;
+    case "*" :
+      console.log(x0419 * y0419);
+      break;
+    case "/" :
+      if(y0419 == 0){
+        console.log("Divided by zero!");
+        break;
+      }
+      console.log(x0419 / y0419);
+      break;
+    default:
+      console.log("Invalid operator!");
+  }
+</script>
+
+<script id="ch0104/20">
+  var a0420 = Number(prompt("04/20输入浮点数a的值"));
+  var b0420 = Number(prompt("04/20输入浮点数b的值"));
+  var c0420 = Number(prompt("04/20输入浮点数c的值"));
+  var D0420 = Math.sqrt(b0420 * b0420 - 4 * a0420 * c0420);
+  var x1_20 = (-b0420 + D0420) / (2 * a0420);
+  var x2_20 = (-b0420 - D0420) / (2 * a0420);
+
+  var i_20 = Math.sqrt((4 * a0420 * c0420 - b0420 * b0420) / (2 * a0420));
+  var B_20 = (-b0420) / (2 * a0420);
+  if(b0420 * b0420 == 4 * a0420 * c0420){
+    console.log("x1=x2=" + x1_20.toFixed(5));
+  }
+  else if(b0420 * b0420 > 4 * a0420 * c0420){
+    console.log("x1=" + x1_20.toFixed(5) + ";x2=" + x2_20.toFixed(5) + "其中x1>x2");
+  }
+  else{
+
+  }
+</script>
