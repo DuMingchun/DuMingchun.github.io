@@ -388,3 +388,44 @@
 
 <!-------------------------------------------------------------->
 <!-------------------------------------------------------------->
+<script id="ch0105/01">
+  var n = Number(prompt("n"));
+  var sum = 0;
+  for (var i = 0 ; i < n ; i++){
+    var y = Number(prompt("y"));
+    sum = sum + y;
+  }
+  console.log((sum / n).toFixed(2));
+</script>
+
+<script id="ch0105/02">
+  var momth = 12;
+  var money = 0;
+  for (var i = 0 ; i < momth ; i++){
+    var val = Number(prompt("$"));
+    money = money + val
+  }
+  console.log((money / momth).toFixed(2));
+</script>
+
+<script id="ch0105/03">
+  var x = Number(prompt("x"));
+  var sum = 0;
+  var i = 0;
+  while(i < x){
+    var val = Number(prompt("val"));
+    sum = sum + val;
+    i++;
+  }
+  console.log((sum / x).toFixed(4));
+</script>
+
+<script id="ch0105/04">
+  var n = Number(prompt("n"));
+  var sum = 0;
+  for (var i = 0 ; i < n ; i++){
+    var x = Number(prompt("x"));
+    sum = sum + x;
+  }
+  console.log( sum , (sum / n).toFixed(5));
+</script>
