@@ -580,9 +580,10 @@
   var K = Number(prompt("K"));
   var hos = 200;
   var Y = 0;
+
   while(N < hos){
     hos = hos * (K / 100 + 1);
-    N = N + N;
+    N = N * Y;
     if (Y > 20){
       console.log("Impossible");
       break;
