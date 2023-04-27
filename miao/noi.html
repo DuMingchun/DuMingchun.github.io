@@ -564,3 +564,32 @@
   }
   console.log(x.toFixed(4));
 </script>
+
+<script id="ch0105/15">
+  var R = Number(prompt("R"));
+  var M = Number(prompt("M"));
+  var Y = Number(prompt("Y"));
+  for (var i = 0 ; i < Y ; i++){
+    M = M * (R / 100 + 1);
+  }
+  console.log(Math.trunc(M));
+</script>
+
+<script id="ch0105/16">
+  var N = Number(prompt("N"));
+  var K = Number(prompt("K"));
+  var hos = 200;
+  var Y = 0;
+  while(N < hos){
+    hos = hos * (K / 100 + 1);
+    N = N + N;
+    if (Y > 20){
+      console.log("Impossible");
+      break;
+    }
+    else{
+      Y = Y + 1;
+    }
+  }
+  console.log(Y);
+</script>
