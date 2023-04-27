@@ -429,3 +429,121 @@
   }
   console.log( sum , (sum / n).toFixed(5));
 </script>
+
+<script id="ch0105/05">
+  var n = Number(prompt("n"));
+  var max = -Infinity;
+  for (var i = 0 ; i < n ; i++){
+    var x = Number(prompt("x"));
+    if (max <= x){
+      max = x;
+    }
+  }
+  console.log(max);
+</script>
+
+<script id="ch0105/06">
+  var n = Number(prompt("n"));
+  var max = -Infinity;
+  var min = Infinity;
+  for (var i = 0 ; i < n ; i++){
+    if (max <= x){
+      max = x;
+    }
+    if (min >= x){
+      min = x;
+    }
+  }
+  console.log(max - min);
+</script>
+
+<script id="ch0105/07">
+  var n = Number(prompt("n"));
+  var Au = 0;
+  var Ag = 0;
+  var Cu = 0;
+  for (var i = 0 ; i < n ; i++){
+    var jin = Number(prompt("jin"));
+    var yin = Number(prompt("yin"));
+    var ton = Number(prompt("ton"));
+    Au = Au + jin;
+    Ag = Ag + yin;
+    Cu = Cu + ton;
+  }
+  console.log(Au , Ag , Cu , (Au + Ag + Cu));
+</script>
+
+<script id="ch0105/08">
+  var n = Number(prompt("n"));
+  var sum = 0;
+  var all = (n - 2) * 180;
+  for (var i = 0 ; i < (n - 1) ; i++){
+    var angle = Number(prompt("angle"));
+    sum = sum + angle;
+  }
+  console.log(all - sum);
+</script>
+
+<script id="ch0105/09">
+  var m = Number(prompt("m"));
+  var n = Number(prompt("n"));
+  var sum = 0;
+
+  if (m % 2 == 1){
+    for (m ; m <= n ; m += 2 ){
+      sum = sum + m;
+    }
+  }
+  else{
+    m = m + 1;
+    for (m ; m <= n ; m += 2 ){
+      sum = sum + m;
+    }
+  }
+  console.log(sum);
+</script>
+
+<script id="ch0105/10">
+  var m = Number(prompt("m"));
+  var n = Number(prompt("n"));
+  var sum = 0;
+  for (m ; m <= n ; m++ ){
+    if (m % 17 == 0){
+      sum = sum + m;
+    }
+  }
+  console.log(sum);
+</script>
+
+<script id="ch0105/11">
+  var n = Number(prompt("n"));
+  var one = 0;
+  var fiv = 0;
+  var ten = 0;
+  for (var i = 0 ; i < n ; i++){
+    var va = Number(prompt("va"));
+    if (va == 1){
+      one = one + 1;
+    }
+    if (va == 5){
+      fiv = fiv + 1;
+    }
+    if (va == 10){
+      ten = ten + 1;
+    }
+  }
+  console.log(one , fiv , ten );
+</script>
+
+<script id="ch0105/12">
+  var n = Number(prompt("n"));
+  var m = Number(prompt("m"));
+  var SUM = 0;
+  for (var i = 0 ; i < n ; i++){
+    var N = Number(prompt("N"));
+    if (N == m){
+      SUM = SUM + 1;
+    }
+  }
+  console.log(SUM);
+</script>
