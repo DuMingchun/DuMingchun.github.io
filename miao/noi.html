@@ -593,3 +593,56 @@
   }
   console.log(Y);
 </script>
+
+<script id="ch0105/17">
+  var k = Number(prompt("k"));
+  var n = 1;
+  var n1 = 1;
+
+  for (var i = 0 ; i < (k - 2) ; i++){
+    var n2 = n + n1;
+    n1 = n2;
+    n = n1;
+  }
+  console.log(n2);
+</script>
+
+<script id="ch0105/18">
+  var n = Number(prompt("n"));
+
+  var zong = Number(prompt(""));
+  var yx = Number(prompt(""));
+  var XG1 = yx / zong;
+  for(var j = 0 ; j < (n - 1) ; j++){
+    var zong = Number(prompt(""));
+    var yx = Number(prompt(""));
+    var xg = yx / zong;
+    if(XG1 - xg > 0.05){
+      console.log("worse");
+    }
+    else if(xg - XG1 > 0.05){
+      console.log("better");
+    }
+    else{
+      console.log("same");
+    }
+  }
+</script>
+
+<script id="ch0105/19">
+  var n = Number(prompt("n"));
+  var distance = 0;
+  var alltime = 0;
+  var speed = 50;
+
+  for (var i = 0 ; i < n ; i++){
+    var x = Number(prompt());
+    var y = Number(prompt());
+    var p = Number(prompt());
+    distance = Math.sqrt(x * x + y * y);
+    var time = 2 * distance / speed + (p * 1.5);
+
+    alltime = alltime + time;
+  }
+  console.log(Math.ceil(alltime));
+</script>
