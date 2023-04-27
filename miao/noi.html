@@ -253,8 +253,6 @@
   console.log(a0410);
 </script>
 
-<!-------------------------------------------------------------->
-<!-------------------------------------------------------------->
 <script id="ch0104/11">
   var x0411 = Number(prompt("04/11输入一起去看展览的星期x"));
   var y0411 = (x0411 == 1 || x0411 == 3 || x0411 == 5) ? "NO" : "YES";
@@ -270,8 +268,18 @@
 
 <script id="ch0104/13">
   var x0413 = Number(prompt("04/13输入y=f(x)的值x"));
-  var y0413 = (x0413 >= 0 && x0413 < 5) ? -x0413 + 2.5 : ((x0413 >= 5 && x0413 < 10) ? 2 - 1.5 * (x0413 - 3) * (x0413 - 3) : x0413 / 2 - 1.5);
-  console.log(y0413.toFixed(3));
+  if(x0413 >= 0 && x0413 < 5){
+    var a = -x0413 + 2.5;
+    console.log(a.toFixed(3));
+  }
+  if(x0413 >= 5 && x0413 < 10){
+    var b = 2 - 1.5 * (x0413 - 3) * (x0413 - 3);
+    console.log(b.toFixed(3));
+  }
+  if(x0413 >= 10 && x0413 < 20){
+    var c = x0413 / 2 - 1.5;
+    console.log(c.toFixed(3));
+  }
 </script>
 
 <script id="ch0104/14">
@@ -305,10 +313,10 @@
 <script id="ch0104/17">
   var a0417 = Number(prompt("04/17输入年份a的值"));
   if(a0417 % 3200 == 0 || (a0417 % 400 !== 0 && a0417 % 100 == 0) || a0417 % 4 !== 0){
-    console.log("no");
+    console.log("N");
   }
   else{
-    console.log("yes");
+    console.log("Y");
   }
 </script>
 
@@ -366,6 +374,17 @@
     console.log("x1=" + x1_20.toFixed(5) + ";x2=" + x2_20.toFixed(5) + "其中x1>x2");
   }
   else{
-
+    console.log("x1=" + (B_20 + i_20).toFixed(5) + ";x2=" + (B_20 - i_20).toFixed(5))
   }
 </script>
+
+<script id="ch0104/21">
+  var n0421 = Number(prompt("n的值"));
+  var x0421 = Number(prompt("x的值"));
+  var y0421 = Number(prompt("y的值"));
+  var z0421 = n0421 - Math.ceil(y0421 / x0421);
+  console.log(z0421);
+</script>
+
+<!-------------------------------------------------------------->
+<!-------------------------------------------------------------->
