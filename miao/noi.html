@@ -579,12 +579,13 @@
   var N = Number(prompt("N"));
   var K = Number(prompt("K"));
   var hos = 200;
-  var Y = 0;
 
-  for( ; N < hos ; ){
+  for(var i = 1 ; i <= 20 ; i++){
+    N = N * i;
+    if(N > hos){
+      console.log(i);
+    }
     hos = hos * (K / 100 + 1);
-    N = N * Y;
-    Y = Y + 1;
   }
   console.log(Y);
 </script>
