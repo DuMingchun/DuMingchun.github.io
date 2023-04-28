@@ -703,9 +703,16 @@
 <script id="ch0105/23">
   var m = Number(prompt("药品总量m"));
   var n = Number(prompt("取药人数n"));
+  var NGet = 0;
   for(var i = 0 ; i < n ; i++){
-
+    var s = Number(prompt("每个病人需要的药品数量s"));
+    m -= s;
+    if(m < 0){
+      NGet++;
+      m += s;
+    }
   }
+  console.log(NGet);
 
 
 </script>
