@@ -695,7 +695,7 @@
     }
     if(balance >= 100){
       saving += (balance - balance % 100);
-      balance -= (balance - balance % 100);
+      balance = balance % 100;
     }
   }
   if(safe == true){
