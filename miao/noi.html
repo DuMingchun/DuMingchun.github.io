@@ -717,6 +717,22 @@
     }
   }
   console.log(NGet);
+</script>
 
-
+<script id="ch0105/24">
+  var n = Number(prompt("测量血压次数n"));
+  var maxt = 0;  //血压连续正常的最大数
+  var t = 0;  //血压连续正常的最大数
+  for(var i = 0 ; i < n ; i++){
+    var h = Number(prompt("高压h"));
+    var l = Number(prompt("低压l"));
+    if((h >= 90 && h <= 140) && (l >= 60 && l <= 90)){
+      t += 1
+    }
+    if(t > maxt){
+      maxt = t;
+      t = 0;
+    }
+  }
+  console.log(maxt);
 </script>
