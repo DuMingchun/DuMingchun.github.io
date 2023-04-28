@@ -374,7 +374,7 @@
     console.log("x1=" + x1_20.toFixed(5) + ";x2=" + x2_20.toFixed(5) + "其中x1>x2");
   }
   else{
-    console.log("x1=" + (B_20 + i_20).toFixed(5) + ";x2=" + (B_20 - i_20).toFixed(5))
+    console.log("x1=" + B_20.toFixed(5) + "+" + i_20.toFixed(5) + "i" + ";x2=" + B_20.toFixed(5) + "-" + i_20.toFixed(5) + "i")
   }
 </script>
 
@@ -447,6 +447,7 @@
   var max = -Infinity;
   var min = Infinity;
   for (var i = 0 ; i < n ; i++){
+    var x = Number(prompt("x"));
     if (max <= x){
       max = x;
     }
