@@ -598,8 +598,8 @@
 
 <script id="ch0105/17">
   var k = Number(prompt("k"));
-  var n = 0;
-  var n1 = 1;
+  var a = 0;
+  var b = 1;
 
   for (var i = 0 ; i < k ; i++){
     var n2 = n + n1;
@@ -650,10 +650,30 @@
 </script>
 
 <script id="ch0105/20">
-  var m = Number(prompt("m"));
+  var h = Number(prompt("h"));
+  var tot = -h;
 
-  for (var i = 0 ; i < n ; i++){
-
+  for (var i = 0 ; i < h ; i++){
+    tot += h * 2;
+    h = h / 2;
   }
-  console.log();
+  console.log(tot , h);
+</script>
+
+<script id="ch0105/20">
+  var n = Number(prompt("n"));
+  var tot = -h;
+  var next = 0;
+  while(n != 1){
+    if ( n % 2 == 0){
+      next = n / 2;
+      n = next;
+      console.log();
+    }
+    else{
+      next = n * 3 + 1;
+      n = next;
+      console.log();
+    }
+  }
 </script>
