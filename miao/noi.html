@@ -365,7 +365,8 @@
   var x1_20 = (-b0420 + D0420) / (2 * a0420);
   var x2_20 = (-b0420 - D0420) / (2 * a0420);
 
-  var i_20 = Math.sqrt((4 * a0420 * c0420 - b0420 * b0420) / (2 * a0420));
+  var i_20 = Math.sqrt(4 * a0420 * c0420 - b0420 * b0420) / (2 * a0420);
+
   var B_20 = (-b0420) / (2 * a0420);
   if(b0420 * b0420 == 4 * a0420 * c0420){
     console.log("x1=x2=" + x1_20.toFixed(5));
@@ -585,7 +586,7 @@
 
   for(var i = 1 ; i <= 20 ; i++){
     A += N;
-    if(N > hos){
+    if(A > hos){
       console.log(i);
       buyed = true;
       break;
