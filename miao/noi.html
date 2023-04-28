@@ -579,15 +579,21 @@
   var N = Number(prompt("N"));
   var K = Number(prompt("K"));
   var hos = 200;
+  var buyed = false;
 
   for(var i = 1 ; i <= 20 ; i++){
     N = N * i;
     if(N > hos){
       console.log(i);
+      buyed = true;
+      break;
     }
     hos = hos * (K / 100 + 1);
   }
-  console.log(Y);
+  if(buyed = false){
+    console.log("Impossible");
+  }
+
 </script>
 
 <script id="ch0105/17">
