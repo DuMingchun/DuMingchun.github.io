@@ -660,20 +660,47 @@
   console.log(tot , h);
 </script>
 
-<script id="ch0105/20">
+<script id="ch0105/21">
   var n = Number(prompt("n"));
-  var tot = -h;
   var next = 0;
   while(n != 1){
     if ( n % 2 == 0){
       next = n / 2;
+      console.log(n + "/2=" + next);
       n = next;
-      console.log();
     }
     else{
       next = n * 3 + 1;
+      console.log(n + "*3+1=" + next);
       n = next;
-      console.log();
     }
   }
 </script>
+
+<script id="ch0105/22">
+  var money = 0;
+  var saving = 0;
+  var balance = 0;
+  var safe = true;
+  for(var month = 0 ; month < 12 ; month++){
+    money = 300 + balance;
+    var cost = Number(prompt("花销"));
+    balance += money - cost; //每月剩余
+    if(money - cost < 0){
+      safe = false;
+      console.log(-month);
+    }
+    if(balance >= 100){
+      saving += (balance - balance % 100);
+      balance -= (balance - balance % 100);
+    }
+  }
+  if(safe = true){
+    console.log(saving * 1.2 + balance);
+  }
+
+
+
+
+</script>
+
