@@ -675,6 +675,7 @@
       n = next;
     }
   }
+  console.log("End");
 </script>
 
 <script id="ch0105/22">
@@ -682,7 +683,7 @@
   var saving = 0;
   var balance = 0;
   var safe = true;
-  for(var month = 0 ; month < 12 ; month++){
+  for(var month = 1 ; month <= 12 ; month++){
     money = 300 + balance;
     var cost = Number(prompt("花销"));
     balance += money - cost; //每月剩余
@@ -695,7 +696,7 @@
       balance -= (balance - balance % 100);
     }
   }
-  if(safe = true){
+  if(safe == true){
     console.log(saving * 1.2 + balance);
   }
 </script>
