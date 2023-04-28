@@ -582,7 +582,7 @@
   var buyed = false;
 
   for(var i = 1 ; i <= 20 ; i++){
-    N = N * i;
+    N = N + N;
     if(N > hos){
       console.log(i);
       buyed = true;
@@ -598,15 +598,15 @@
 
 <script id="ch0105/17">
   var k = Number(prompt("k"));
-  var a = 0;
-  var b = 1;
+  var n = 1;
+  var n1 = 1;
 
-  for (var i = 0 ; i < k ; i++){
+  for (var i = 0 ; i < (k - 2) ; i++){
     var n2 = n + n1;
     n = n1;
     n1 = n2;
   }
-  console.log(n);
+  console.log(n2);
 </script>
 
 <script id="ch0105/18">
