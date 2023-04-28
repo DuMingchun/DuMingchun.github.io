@@ -710,10 +710,12 @@
   var NGet = 0;
   for(var i = 0 ; i < n ; i++){
     var s = Number(prompt("每个病人需要的药品数量s"));
-    m -= s;
-    if(m < 0){
+
+    if(m > s){
+      m -= s;
+    }
+    else{
       NGet++;
-      m += s;
     }
   }
   console.log(NGet);
