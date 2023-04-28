@@ -579,11 +579,12 @@
 <script id="ch0105/16">
   var N = Number(prompt("N"));
   var K = Number(prompt("K"));
+  var A = 0;
   var hos = 200;
   var buyed = false;
 
   for(var i = 1 ; i <= 20 ; i++){
-    N = N + N;
+    A = N * i;
     if(N > hos){
       console.log(i);
       buyed = true;
