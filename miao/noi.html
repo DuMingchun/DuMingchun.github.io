@@ -916,7 +916,7 @@
   while(X * N > M){
     X = X - Math.ceil(M / N);
     var a = M;
-    if(a >= N){
+    while(a >= N){
       a = a - N;
       N++;
     }
