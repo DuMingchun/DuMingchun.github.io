@@ -774,7 +774,7 @@
     Sn = Sn + (1 / n);
     n += 1;
   }
-  console.log(Sn);
+  console.log(n);
 </script>
 
 <script id="ch0105/28">
@@ -786,3 +786,14 @@
     n = Math.trunc(n / 10);
   }
 </script>
+
+<script id="ch0105/29">
+  var n = Number(prompt("n"));
+  var a = 0;
+  while(n > 0){
+    a = n % 10;
+    console.log(a);
+    n = Math.trunc(n / 10);
+  }
+</script>
+
