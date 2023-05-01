@@ -753,8 +753,8 @@
 
     if(a7 == c9 && b7 == b9 && c7 == a9){
       console.log(n);
-      console.log(" " + c7 + b7 + a7);
-      console.log(" " + c9 + b9 + a9);
+      console.log("" + c7 + b7 + a7);
+      console.log("" + c9 + b9 + a9);
     }
   }
 
@@ -882,7 +882,7 @@
   console.log(sum);
 </script>
 
-<script id="ch0105/34">
+<script id="ch0105/35">
   var n = Number(prompt("n"));
   var sum = 1;
   var a = 1;
@@ -895,4 +895,31 @@
     sum = sum + b;
   }
   console.log(sum.toFixed(10));
+</script>
+
+<script id="ch0105/36">
+  var x = Number(prompt("x"));
+  var n = Number(prompt("n"));
+  var sum = 0;
+  var a = 0;
+  for(var i = 0 ; i <= n ; i++){
+    a = (x ** i)
+    sum = sum + a;
+  }
+  console.log(sum.toFixed(2));
+</script>
+
+<script id="ch0105/37">
+  var M = Number(prompt("M"));  //体力最大值
+  var N = Number(prompt("N"));  //初始战斗力
+  var X = Number(prompt("X"));  //能量
+  while(X * N > M){
+    X = X - Math.ceil(M / N);
+    var a = M;
+    if(a >= N){
+      a = a - N;
+      N++;
+    }
+  }
+  console.log(N);
 </script>
