@@ -995,24 +995,22 @@
 </script>
 
 <script id="ch0105/43">
+  debugger
   var n = Number(prompt("n"));
-  var min = 0;
   var max = 0;
   for(var i = 2 ; i < n ; i++){
     if(n % i == 0){
-      min = i;
+      max = i;
     }
   }
-  max = n / min;
   console.log(max);
 </script>
 
 <script id="ch0105/44">
   var n = Number(prompt("n"));
   var a = 0;
-  var bool1 = true;
-
   for(var i = 2 ; a < n ; i++){
+    var bool1 = true;
     for(var j = 2 ; j < i ; j++){
       if(i % j == 0){
         bool1 = false;
