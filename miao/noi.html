@@ -834,20 +834,37 @@
   var n = Number(prompt("n"));
   var m = Number(prompt("m"));
   var a = 0;
-  var b = 0;
-
-
-    for(var i = 1 ; i <= m ; i++){
-      for(var j = 0 ; j < n ; j++){
-
-
-      }
-      if(n % i == 0){
-
-      }
-
+  for(var i = 1 ; i <= m ; i++){
+    for(var j = 0 ; j < n ; j++){
     }
 
+  }
+</script>
 
+<script id="ch0105/32">
+  var n = Number(prompt("n"));
+  var P = 1;
+  var Q = 2;
+  var sum = 0;
+  for(var i = 0 ; i < n ; i++){
+    sum = sum + (Q / P);
+    var Q1 = P + Q;
+    P = Q;
+    Q = Q1;
+  }
+  console.log(sum.toFixed(4));
+</script>
 
+<script id="ch0105/33">
+  var n = Number(prompt("n"));
+  var sum = 0;
+  for(var i = 0 ; i < n ; i++){
+    if(i % 2 == 1){
+      sum = sum + (1 / n);
+    }
+    else{
+      sum = sum - (1 / n);
+    }
+  }
+  console.log(sum.toFixed(4));
 </script>
