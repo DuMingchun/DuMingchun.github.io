@@ -858,12 +858,12 @@
 <script id="ch0105/33">
   var n = Number(prompt("n"));
   var sum = 0;
-  for(var i = 0 ; i < n ; i++){
+  for(var i = 1 ; i <= n ; i++){
     if(i % 2 == 1){
-      sum = sum + (1 / n);
+      sum = sum + (1 / i);
     }
     else{
-      sum = sum - (1 / n);
+      sum = sum - (1 / i);
     }
   }
   console.log(sum.toFixed(4));
@@ -872,8 +872,8 @@
 <script id="ch0105/34">
   var n = Number(prompt("n"));
   var sum = 0;
-  var a = 1;
   for(var i = 1 ; i <= n ; i++){
+    var a = 1;
     for(var j = 1 ; j <= i ; j++){
       a = a * j;
     }
@@ -885,9 +885,9 @@
 <script id="ch0105/35">
   var n = Number(prompt("n"));
   var sum = 1;
-  var a = 1;
-  var b = 0;
   for(var i = 1 ; i <= n ; i++){
+    var a = 1;
+    var b = 0;
     for(var j = 1 ; j < i ; j++){
       a = a * j;
       b = 1 / a;
