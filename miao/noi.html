@@ -939,7 +939,7 @@
     var a = i % 10;
     var b = (i - a) / 10;
     var c = i % 7;
-    if(a !== 7 && b !== 7 && c !== 0){
+    if(a != 7 && b != 7 && c != 0){
       sum = sum + i * i;
     }
   }
@@ -948,17 +948,33 @@
 
 <script id="ch0105/40">
   var n = Number(prompt("n"));
-  var b = n;
   var sum = 0;
   for(var i = 1 ; i <= n ; i++){
+    var re = i
     do{
-      var a = n % 10;
+      var a = re % 10;
+      re = (re - a) / 10;
       if(a == 1){
         sum = sum + 1;
       }
-      n = (n - a) / 10;
     }while(n > 0)
-    n = b;
+  }
+  console.log(sum);
+</script>
+
+<script id="ch0105/41">
+  var l = Number(prompt("l"));
+  var r = Number(prompt("r"));
+  var sum = 0;
+  for(var i = l ; i <= r ; i++){
+    var re = i
+    do{
+      var a = re % 10;
+      re = (re - a) / 10;
+      if(a == 2){
+        sum = sum + 1;
+      }
+    }while(n > 0)
   }
   console.log(sum);
 </script>
