@@ -799,10 +799,14 @@
 
 <script id="ch0105/29">
   var n = Number(prompt("n"));
-  var a = 0;
-  while(n > 0){
-
+  if(n < 0){
+    console.log("-");
   }
+  do{
+    var a = n % 10;
+    console.log(a);
+    n = (n - a) / 10;
+  }while(n > 0)
 </script>
 
 <script id="ch0105/30">
