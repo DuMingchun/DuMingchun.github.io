@@ -889,10 +889,10 @@
 <script id="ch0105/35">
   var n = Number(prompt("n"));
   var sum = 1;
-  for(var i = 1 ; i < n ; i++){
+  for(var i = 1 ; i <= n ; i++){
     var a = 1;
     var b = 0;
-    for(var j = 1 ; j < i ; j++){
+    for(var j = 1 ; j <= i ; j++){
       a = a * j;
       b = 1 / a;
     }
@@ -900,6 +900,7 @@
   }
   console.log(sum.toFixed(10));
 </script>
+
 
 <script id="ch0105/36">
   var x = Number(prompt("x"));
@@ -961,7 +962,7 @@
       if(a == 1){
         sum = sum + 1;
       }
-    }while(n > 0)
+    }while(re > 0)
   }
   console.log(sum);
 </script>
