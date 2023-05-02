@@ -1130,7 +1130,7 @@
 <script id="complete-numbers">
   // 输出1000以内的完全数
   function Perfect (x){
-    for(var i = 2 ; i <= n ; i++){
+    for(var i = 2 ; i <= x ; i++){
       var sum = 0;
       for(var j = 1 ; j < i ; j++){
         if(i % j == 0){
@@ -1140,12 +1140,12 @@
     }
     return sum;
   }
-  var b = Perfect(n);
-  if(b == n){
-    console.log("YES");
-  }
-  else{
-    console.log("NO");
+  var n = 1000;
+  for(var i = 1 ; i <= n; i++){
+    var z = Perfect (i);
+    if(z == i){
+      console.log(z);
+    }
   }
 </script>
 
