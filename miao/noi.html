@@ -1187,12 +1187,32 @@
 <script id="itob">
   // 给定一个整数，将其转换为字符串：不能使用String等现成函数，
   //但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换
-  console.log();
+  var n = Number(prompt("n"));
+  console.log(n);
 </script>
 
 <script id="lcf&lcm">
   // 输入两个数，输出它们的最大公约数和最小公倍数
-  console.log();
+  var a = Number(prompt("a"));
+  var b = Number(prompt("b"));
+  var max_Divisor = 0;
+  for(var i = 1 ; i <= a ; i++){
+    if(a % i == 0){
+      var a_Divisor = i;
+    }
+    for(var j = 1 ; j <= b ; j++){
+      if(b % j == 0){
+        var b_Divisor = j;
+      }
+      if(a_Divisor == b_Divisor){
+        max_Divisor = a_Divisor;
+      }
+    }
+  }
+  var a_Multiple = a / max_Divisor;
+  var max_Multiple = a_Multiple * b;
+  console.log(max_Divisor);
+  console.log(max_Multiple);
 </script>
 
 <script id="sqrt">
