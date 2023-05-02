@@ -1108,9 +1108,8 @@
   //第一个完全数是6，它有约数1、2、3、6，除去它本身6外，1+2+3=6。第二个完全数是28
   var n = Number(prompt("n"));
   function Perfect (x){
-    var sum = 0;
     for(var i = 2 ; i <= n ; i++){
-      sum = 0
+      var sum = 0;
       for(var j = 1 ; j < i ; j++){
         if(i % j == 0){
           sum += j;
