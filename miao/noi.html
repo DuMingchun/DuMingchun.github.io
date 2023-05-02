@@ -1151,8 +1151,9 @@
 <script id="prime">
   // 输入一个数，判断它是否是素数
   var n = Number(prompt("n"));
+  var bool1 = true;
   for(var i = 2 ; i < n ; i++){
-    var bool1 = true
+    var bool1 = true;
     for(var j = 2 ; j < i ; j++){
       if(i % j == 0){
         bool1 = false;
