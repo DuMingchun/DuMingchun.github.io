@@ -1010,15 +1010,31 @@
 <script id="ch0105/42">
   var h = Number(prompt("h"));
   var w = Number(prompt("w"));
-  var char = Number(prompt("char"));
+  var char = prompt("char");
   var b = Number(prompt("b"));
-
+  var edge = "";
+  for(var i = 0 ; i < 2 ; i++){
+    edge += char;
+  }
+  var middle = "";
+  for(var i = 0 ; i < 2 ; i++){
+    if(fill || i == 0 || i == w - 1){
+      middle += char;
+    }
+    else{
+      middle += "";
+    }
+  }
+  var result = edge + '\n';
+  for(var i = 0 ; i < h - 2 ; i++){
+    result += middle + '\n';
+  }
+  result += edge + '\n';
 
   console.log();
 </script>
 
 <script id="ch0105/43">
-  debugger
   var n = Number(prompt("n"));
   var max = 0;
   for(var i = 2 ; i < n ; i++){
