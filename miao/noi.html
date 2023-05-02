@@ -1108,7 +1108,7 @@
   //第一个完全数是6，它有约数1、2、3、6，除去它本身6外，1+2+3=6。第二个完全数是28
   var n = Number(prompt("n"));
   function Perfect (x){
-    for(var i = 2 ; i <= n ; i++){
+    for(var i = 2 ; i <= x ; i++){
       var sum = 0;
       for(var j = 1 ; j < i ; j++){
         if(i % j == 0){
@@ -1118,7 +1118,7 @@
     }
     return sum;
   }
-  var b = Perfect(n)
+  var b = Perfect(n);
   if(b == n){
     console.log("YES");
   }
@@ -1129,7 +1129,24 @@
 
 <script id="complete-numbers">
   // 输出1000以内的完全数
-  console.log();
+  function Perfect (x){
+    for(var i = 2 ; i <= n ; i++){
+      var sum = 0;
+      for(var j = 1 ; j < i ; j++){
+        if(i % j == 0){
+          sum += j;
+        }
+      }
+    }
+    return sum;
+  }
+  var b = Perfect(n);
+  if(b == n){
+    console.log("YES");
+  }
+  else{
+    console.log("NO");
+  }
 </script>
 
 <script id="prime">
