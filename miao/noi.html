@@ -973,16 +973,19 @@
 
 <script id="ch0105/40">
   var n = Number(prompt("n"));
-  var sum = 0;
-  for(var i = 1 ; i <= n ; i++){
-    var re = i
-    do{
-      var a = re % 10;
-      re = (re - a) / 10;
-      if(a == 1){
-        sum = sum + 1;
-      }
-    }while(re > 0)
+  function count1(n){
+    var sum = 0;
+    for(var i = 1 ; i <= n ; i++){
+      var re = i
+      do{
+        var a = re % 10;
+        re = (re - a) / 10;
+        if(a == 1){
+          sum = sum + 1;
+        }
+      }while(re > 0)
+    }
+    return sum;
   }
   console.log(sum);
 </script>
