@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="800" height="800"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated' //放大时的插帧方式：不插帧，直接放大像素
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    x = Math.trunc(x)
+    y = Math.trunc(y)
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * 你的任务：通过调用dot函数，实现：
+   * 需要注意，dot函数不能接收浮点数，如果参数为浮点数，会被转换为整数后绘制
+1      * 在 坐标 (42, 42) 画出一个点
+2      * 画一条水平实线，粗细为一个像素
+3      * 画一条垂直实线，粗细为一个像素
+4      * 画一条一个实点一个空点的虚线
+5      * 画一条两个实点两个空点的虚线
+6      * 画一条三个实点两个空点的虚线
+7      * 画一条45度的斜线
+8      * 画一条30度的斜线（与x轴的夹角呈30度）
+9      * 画一条60度的斜线（与x轴的夹角呈60度）
+10      * 画一条跨越画布左上角和右下角的对角线
+11      * 画一个空心矩形
+12      * 画一个实心矩形
+13      * 画两个空心的圆，圆心在画布中心：
+14        * 一个半径为50像素
+15        * 一个半径为200像素
+16      * 画一个实心的圆，半径至少为100像素
+      * 画一个【大小位置都合适】的sin(x)的图像
+
+18      * 画出rgb色彩空间的某一面（尺寸要大于100x100）
+      * 如果做出上一题后，尝试将其每个点的坐标乘以一个矩阵（如(2,0,0,2)或(1,0.27得到新的位置，即绘制出被线性变换后的色彩空间某一面
+        可以考虑如下几种矩阵：
+           2 0
+           0 2
+           ------
+           1  0.27
+           0  1
+           ------
+           0.5    0.87
+           -0.87  0.5
+
+   */
+</script>
+<script>
+  // 不可更改上面的代码
+  // 你的代码写在这里
+//1
+  dot(42, 42, color = 'black');
+//2
+  for(var i = 0 ; i < 800 ; i++){
+    dot(i, 0, color = 'black');
+  }
+//3
+  for(var i = 0 ; i < 800 ; i++){
+    dot(0, i, color = 'black');
+  }
+//4
+  for(var i = 0 ; i < 800 ; i+=2){
+    dot(2, i, color = 'black');
+  }
+//5
+for(var i = 0 ; i < 800 ; i+=4){
+    dot(i, 2, color = 'black');
+    dot(i+1, 2, color = 'black');
+  }
+//6
+for(var i = 0 ; i < 800 ; i+=5){
+    dot(i, 4, color = 'black');
+    dot(i+1, 4, color = 'black');
+    dot(i+2, 4, color = 'black');
+  }
+//7 10
+for(var i = 0 ; i < 800 ; i++){
+    dot(i, i, color = 'rgb(' + (255 - i) + ', ' + (i) + ', 255)');
+  }
+//8
+for(var i = 0 ; i < 800 ; i++){
+    dot(i * 2, i, color = 'rgb(' + (255 - i) + ', '  + '255 ,' + (i) + ')');
+  }
+//9
+for(var i = 0 ; i < 800 ; i++){
+  dot(i, i * 2, color = 'rgb( 255,' + (255 - i) + ',' + (i) + ')');
+}
+//11
+var rectangle_w = 70;
+var rectangle_h = 70;
+for(var i = 1 ; i <= rectangle_h ; i++){
+  for(var j = 1 ; j <= rectangle_w ; j++){
+    if(j == 1 || j == rectangle_w || i == 1 || i == rectangle_h){
+      dot((j + 50),(i + 10),color = 'black');
+    }
+  }
+}
+//12
+var rectangle_w = 70;
+var rectangle_h = 70;
+for(var i = 1 ; i <= rectangle_h ; i++){
+  for(var j = 1 ; j <= rectangle_w ; j++){
+    dot((j + 160),(i + 10),color = 'black');
+  }
+}
+//13 14 15 圆
+var rectangle_w = 50;
+var rectangle_h = 50;
+for(var i = -rectangle_h ; i <= rectangle_h ; i++){
+  for(var j = -rectangle_w ; j <= rectangle_w ; j++){
+    if(j * j + i * i >= 2450 && j * j + i * i <= 2550){
+      dot((j + 399),(i + 399),color = 'black');
+    }
+  }
+}
+//13 14 15
+var rectangle_w = 200;
+var rectangle_h = 200;
+for(var i = -rectangle_h ; i <= rectangle_h ; i++){
+  for(var j = -rectangle_w ; j <= rectangle_w ; j++){
+    if(j * j + i * i >= 39800 && j * j + i * i <= 40200){
+      dot((j + 399),(i + 399),color = 'black');
+    }
+  }
+}
+//16
+var circle_w = 50;
+var circle_h = 50;
+for(var i = -circle_h ; i <= circle_h ; i++){
+  for(var j = -circle_w ; j <= circle_w ; j++){
+    if(j * j + i * i <= 2500){
+      dot((j + 100),(i + 350),color = 'black');
+    }
+  }
+}
+//17* 画一个【大小位置都合适】的sin(x)的图像
+for(var x = 0 ; x < 800 ; x++){
+  var y = Math.sin(x / 30) * 30
+  dot(x , y + 250)
+}
+
+//18
+var color_w = 255;
+var color_h = 255;
+for(var i = 0 ; i <= color_h / 2 ; i++){
+  for(var j = 0 ; j <= color_w / 2 ; j++){
+    dot((j + 10),(i + 665),color = 'rgb(255, ' + (i * 2) + ',' + (j * 2) +')');
+  }
+}
+//19 乘以矩阵
+//2  0
+//0  2
+var color_w = 255;
+var color_h = 255;
+for(var i = 0 ; i <= color_h / 2 ; i++){
+  for(var j = 0 ; j <= color_w / 2 ; j++){
+    var x = 2 * j;
+    var y = 2 * i;
+    dot((x + 530),(y + 10),color = 'rgb(0, ' + (i * 2) + ',' + (j * 2) +')');
+  }
+}
+//19 乘以矩阵
+//1  0.27
+//0  1
+var color_w = 255;
+var color_h = 255;
+for(var i = 0 ; i <= color_h / 2 ; i++){
+  for(var j = 0 ; j <= color_w / 2 ; j++){
+    var x = j;
+    var y = 0.27 * j + i;
+    dot((x + 10),(y + 460),color = 'rgb(' + (i * 2) + ', 255 ,' + (j * 2) +')');
+  }
+}
+//19 乘以矩阵
+// 0.5   0.87  x= 0.5x +  -0.87y
+//-0.87  0.5   y= 0.87x + 0.5y
+var color_w = 255;
+var color_h = 255;
+for(var i = 0 ; i <= color_h / 2 ; i++){
+  for(var j = 0 ; j <= color_w / 2 ; j++){
+    var x = 0.5 * j + -0.87 * i;
+    var y = 0.87 * j + 0.5 * i;
+    dot((x + 270),(y + 580),color = 'rgb(0, ' + (i * 2) + ',' + (j * 2) +')');
+  }
+}
+
+
+
+
+
+//////////////////////////////////////////////////////
+var circle_w = 50;
+var circle_h = 50;
+for(var i = -circle_h ; i <= circle_h ; i++){
+  for(var j = -circle_w ; j <= circle_w ; j++){
+    if(j * j + i * i >= 2500){
+      dot((j + 440),(i + 60),color = 'black');
+    }
+  }
+}
+
+
+
+
+
+
+</script>
+<script>
+  function aaa (cx , cy , r , color){
+
+    for(var x = -50 * 0.7 ; x <= 50 * 0.7 ; x++){
+      var y = Math.sqrt(50 * 50 - x * x)
+      dot(x + cx , y + cy)
+      dot(x + cx , -y + cy)
+    }
+    for(var y = -50 * 0.7 ; y <= 50 * 0.7 ; y++){
+      var x = Math.sqrt(50 * 50 - y * y)
+      dot(y + cy , x + cx)
+      dot(y + cy , -x + cx)
+    }
+  }
+
+
+</script>
+</html>
