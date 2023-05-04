@@ -1099,7 +1099,56 @@
 
 <script id="weekday">
   // 输入年份与月份，输出这个月的第一天是周几（视具体设定，周一可以用1或0表示）
-  console.log();
+  // 输入年份与月份 获得当月有几天
+  function getmonth(y , month){
+    if(month == 2){
+      if(y % 400 == 0 || y % 100 !== 0 && y % 4 == 0){
+        return 29;
+      }
+      else{
+        return 28;
+      }
+    }
+    else{
+      switch(month){
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+          return 31;
+        default:
+          return 30;
+      }
+    }
+  }
+  //第一种方法
+  function weekday(year,month){
+    var daysum = 0;
+    for(var i = 1 ; i < year ; i++){
+      if(i % 400 == 0 || i % 100 !== 0 && i % 4 == 0){
+        daysum += 366;
+      }
+      else{
+        daysum += 365;
+      }
+    }
+    for(var m = 1 ; m < month ; m++){
+      daysum += getmonth(year,month);
+    }
+    return (daysum + 1) % 7;
+  }
+  //第二种方法
+  function weekday2(year,month){
+    var y = year - 1;
+    var daysum = y * 365 + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400);
+    for(var m = 1 ; m < month ; m++){
+    daysum += getmonth(year,month);
+    }
+    return (daysum + 1) % 7;
+  }
 </script>
 
 <script id="complete-number">
@@ -1217,5 +1266,68 @@
 
 <script id="sqrt">
   // 输入一个数，求它的平方根，精确到小数点后3位，不能使用Math.sqrt
+  function Sqrtn(n){
+    var i = n;
+    do{
+      if(i * i > n ){
+        i = i / 2;
+      }
+      else if(i * i < n ){
+        i += i / 2;
+      }
+      else{
+        return i;
+      }
+    }while((i * i - n) < 0.0001)
+  }
+  function Sqrtn2(n){
+    var left = 0;
+    var right = n;
+    while(right - left > 0.000001){
+      var mid = (left + right) / 2;
+      if(mid * mid > n ){
+        right = mid;
+      }
+      else if(mid * mid < n ){
+        left += mid;
+      }
+      else{
+        return mid;
+      }
+      return (left + right) / 2;
+    }
+  }
+
+  function SqrtNT(n){
+    var x = n
+    for(var i = 0 ; i < 30 ; i++){
+     x = (n / x + x) / 2
+    }
+    return x;
+  }
+
   console.log();
+</script>
+
+<script id="sqrt">
+  function largestCommonFactor(a , b){
+    var c;
+    do{
+      c = a % b
+      a = b
+      b = c
+    }while(c != 0)
+    return a;
+  }
+  function largestCommonFactor2(a , b){
+    while(a != b){
+      if(a > b){
+        a -= b
+      }
+      else{
+        b -= a
+      }
+    }
+    return a;
+  }
 </script>
