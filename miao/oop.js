@@ -5,6 +5,11 @@
 LinkedList实现前后增删以及at以及length
 
 /miao/oop.js
+
+class语法
+必须用new 调用
+原型上的方法全部默认不可枚举
+更紧凑
 */
 class Map {
   constructor() {
