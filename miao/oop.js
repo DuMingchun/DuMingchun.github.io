@@ -11,7 +11,7 @@ class语法
 原型上的方法全部默认不可枚举
 更紧凑
 */
-class Map {
+class MyMap {
   constructor() {
     this._keys = []
     this._vals = []
