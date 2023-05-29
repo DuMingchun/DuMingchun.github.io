@@ -127,7 +127,12 @@ class MySet {
   }
 }
 
+class Vector{
+  constructor(){
 
+  }
+
+}
 
 
 
