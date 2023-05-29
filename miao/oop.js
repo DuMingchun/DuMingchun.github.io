@@ -57,7 +57,75 @@ class MyMap {
 
 }
 
+class MySet {
+  constructor(){
+    this.head = null
+    this.tail = null
+    this.l = 0
+  }
 
+  add(val){
+    var node = {
+      val: val,
+      next: null
+    }
+    if(this.head == null){
+      this.head = this.tail = node
+      this.l++
+      return
+    }
+    else{
+      this.tail.next = node
+      this.tail = node
+      this.l++
+      return
+    }
+  }
+  remove(val){
+    var dummy = new ListNode()
+    dummy.next = this.head
+    var p = this.head.next
+    var q = this.head
+    while(p){
+      if(p.val == val){
+        this.l--
+        q.next = q.next.next
+        return dummy.next
+      }
+      p = p.next
+      q = q.next
+    }
+    return p
+
+  }
+  has(val){
+    var p = this.head
+    while(p){
+      if(p.val == val){
+        return true
+      }
+      p = p.next
+    }
+    return false
+  }
+  size(){
+    var length = 0
+    var p = this.head
+    while(p){
+      p = p.next
+      length++
+    }
+    return length
+  }
+
+  empty(){
+    this.head = null
+    this.tail = null
+    this.head.next = null
+    this.tail.next = null
+    return
+  }
+}
 
 
 
