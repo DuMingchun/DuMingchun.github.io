@@ -57,3 +57,60 @@ class MyMap {
 
 }
 
+
+
+
+
+
+
+
+
+
+class Arraylist {
+  constructor() {
+    this.array = []
+  }
+
+  push(val){  //末尾添加
+    var result = Array(this.array.length + 1)
+    result[result.length - 1] = val
+    this.array = result
+    return
+  }
+  pop(){  //末尾删除
+    if(this.array.length == 0){
+      return undefined
+    }
+    var result = Array(this.array.length - 1)
+    for(var i = 0; i < result.length; i++){
+      result[i] = this.array[i]
+    }
+    this.array = result
+    return
+  }
+  unshift(val){  //开头添加
+    var result = Array(this.array.length + 1)
+    result[0] = val
+    for(var i = 0; i < this.array.length; i++){
+      result[i + 1] = this.array[i]
+    }
+    this.array = result
+    return
+  }
+  shift(){  //开头删除
+    if(this.array.length == 0){
+      return undefined
+    }
+    var result = Array(this.array.length - 1)
+    for(var i = 0; i < result.length; i++){
+      result[i] = this.array[i + 1]
+    }
+    this.array = result
+    return
+  }
+}
+
+
+
+
+
