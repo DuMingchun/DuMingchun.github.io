@@ -1,4 +1,4 @@
 
-var DuMingchun = {
+var dumingchun = {
 
 }
