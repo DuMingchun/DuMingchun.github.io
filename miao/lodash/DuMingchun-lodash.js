@@ -20,6 +20,10 @@
  * trim,  trimStart,  trimEnd,  assign,  merge,
  *
  */
+
+var compact = function(array){
+
+}
 var dumingchun = {
   compact: function(array){
     var result = []
