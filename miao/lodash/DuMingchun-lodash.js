@@ -31,8 +31,6 @@ var dumingchun = {
         result.push(item)
       }
     }
-
-
     return result
   }
 }
