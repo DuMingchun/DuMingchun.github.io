@@ -27,10 +27,7 @@ var dumingchun = {
   compact: function(array){
     var result = [];
     for(item of array){
-      if(item == false || item == null || item == 0 || item == '' || item == undefined || item == NaN){
-
-      }
-      else{
+      if(item !== false && item !== null && item !== 0 && item !== '' && item !== undefined && item !== NaN){
         result.push(item);
       }
     }
