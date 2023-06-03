@@ -23,16 +23,50 @@
 
 
 var dumingchun = {
+//创建一个新数组，包含原数组中所有的非假值元素。例如false, null,0, "", undefined, 和 NaN 都是被认为是“假值”。
   compact: function(array){
-    var result = []
+    var result = [];
     for(item of array){
       if(item == false || item == null || item == 0 || item == '' || item == undefined || item == NaN){
 
       }
       else{
-        result.push(item)
+        result.push(item);
       }
     }
-    return result
+    return result;
+  },
+//将数组（array）拆分成多个 size 长度的区块，并将这些区块组成一个新数组
+  chunk: function(array , size = 1){
+    var result = [];
+
+
+
+
+
+
+    return result;
+  },
+//使用 value 值来填充（替换） array，从start位置开始, 到end位置结束（但不包含end位置）。
+  fill: function(array , value, start = 0, end = array.length){
+
+
+
+
+
+
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
