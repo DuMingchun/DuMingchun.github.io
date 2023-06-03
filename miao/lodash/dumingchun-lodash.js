@@ -54,12 +54,14 @@ var dumingchun = {
 
 
 
+    return result;
+  },
+//创建一个切片数组，去除array前面的n个元素。（n默认值为1。）
+  drop: function(array, n = 1){
 
-  }
 
-
-
-
+    return result;
+  },
 
 
 
