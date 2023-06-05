@@ -49,10 +49,35 @@ var dumingchun = {
     }
     return result;
   },
+  //创建一个具有唯一array值的数组，每个值不包含在其他给定的数组中
+  difference: function(array, values){
+    var result = [];
+    for(var i = 0; i < array.length; i++){
+      for(array[i] in values){
+
+      }
+    }
+
+
+
+  },
+
+
+
+
   //创建一个切片数组，去除array前面的n个元素。（n默认值为1。）
   drop: function(array, n = 1){
     var result = array.slice(n, array.length);
-
+    return result;
+  },
+  //创建一个切片数组，去除array前面的n个元素。（n默认值为1。）
+  dropRight: function(array, n = 1){
+    var result = array.slice(0, array.length + n);
+    return result;
+  },
+  //创建一个切片数组，去除array中从 predicate 返回假值开始到尾部的部分。predicate 会传入3个参数： (value, index, array)。
+  dropRightWhile: function(array, predicate = _.identity){
+    var result = array.slice(0, array.length + n);
     return result;
   },
   //使用 value 值来填充（替换） array，从start位置开始, 到end位置结束（但不包含end位置）。
@@ -65,11 +90,11 @@ var dumingchun = {
   //返回第一个通过 predicate 判断为真值的元素的索引值（index），而不是元素本身
   findIndex: function(array, predicate = _.identity, fromIndex = 0){
 
-
-
-
-
-    return idx;
+    for(var i = 0; i < array.length; i++){
+      if(predicate(array[i])){
+        return i
+      }
+    }
   },
   //类似_.findIndex， 区别是它是从右到左的迭代集合array中的元素。
   findLastIndex: function(){
