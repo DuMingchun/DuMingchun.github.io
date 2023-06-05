@@ -92,7 +92,7 @@ var dumingchun = {
 
     for(var i = fromIndex; i < array.length; i++){
       if(predicate(array[i])){
-        return i
+        return i;
       }
     }
   },
@@ -100,7 +100,7 @@ var dumingchun = {
   findLastIndex: function(array, predicate = _.identity, fromIndex = array.length - 1){
     for(var i = fromIndex; i >= 0; i--){
       if(predicate(array[i])){
-        return i
+        return i;
       }
     }
   },
