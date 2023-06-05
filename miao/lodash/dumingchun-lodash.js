@@ -90,19 +90,19 @@ var dumingchun = {
   //返回第一个通过 predicate 判断为真值的元素的索引值（index），而不是元素本身
   findIndex: function(array, predicate = _.identity, fromIndex = 0){
 
-    for(var i = 0; i < array.length; i++){
+    for(var i = fromIndex; i < array.length; i++){
       if(predicate(array[i])){
         return i
       }
     }
   },
   //类似_.findIndex， 区别是它是从右到左的迭代集合array中的元素。
-  findLastIndex: function(){
-
-
-
-
-
+  findLastIndex: function(array, predicate = _.identity, fromIndex = array.length - 1){
+    for(var i = fromIndex; i >= 0; i--){
+      if(predicate(array[i])){
+        return i
+      }
+    }
   },
   //减少一级array嵌套深度。
   flatten: function(array){
