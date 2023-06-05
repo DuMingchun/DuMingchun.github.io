@@ -196,9 +196,9 @@ var dumingchun = {
   join: function(array, separator = ','){
     var str = ''
     for(var i = 0; i < array.length; i++){
-      str += array[i] + separator;
+      str += toString(array[i]) + toString(separator);
     }
-    return str;
+    return str.slice(0, -1);
   },
   //获取array中的最后一个元素。
   last: function(array){
