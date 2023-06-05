@@ -192,7 +192,7 @@ var dumingchun = {
 
 
 
-
+  //将 array 中的所有元素转换为由 separator 分隔的字符串。
   join: function(array, separator = ','){
     var str = ''
     for(var i = 0; i < array.length; i++){
@@ -200,8 +200,10 @@ var dumingchun = {
     }
     return str;
   },
-
-
+  //获取array中的最后一个元素。
+  last: function(array){
+    return array[array.length - 1];
+  },
 
 
 
