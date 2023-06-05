@@ -87,7 +87,7 @@ var dumingchun = {
     }
     return result;
   },
-
+//将array递归为一维数组。
   flattenDeep: function(array){
     var result = [];
     for(item of array){
@@ -96,7 +96,22 @@ var dumingchun = {
       }
 
     }
-  }
+  },
+//根据 depth 递归减少 array 的嵌套层级
+  flattenDepth: function(array, depth = 1){
+
+  },
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
