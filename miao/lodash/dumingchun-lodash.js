@@ -65,3 +65,35 @@ var dumingchun = {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * var username = function () {
+ *     function chunk (  ){
+ *
+ *     }
+ *
+ *     function compact (  ){
+ *
+ *     }
+ *
+ *     return {
+ *         chunk,
+ *         compact,
+ *     }
+ *
+ * }
+ *
+ */
