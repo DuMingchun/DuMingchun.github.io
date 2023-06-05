@@ -231,23 +231,25 @@ var dumingchun = {
   },
   //移除数组array中所有和给定值相等的元素，使用SameValueZero 进行全等比较。
   pull: function(array, ...values){
-    var p = array.lenght;
+
     for(var i = 0; i < array.lenght; i++){
-      if(array[i] in values){
-        sawp(array, i, p);
-        p--;
-        i--;
-      }
+
     }
     return array.slice(0, p);
   },
 
 
-  //这个方法类似_.pull，区别是这个方法接收一个要移除值的数组。
 
 
 
 
+  //反转array，使得第一个元素变为最后一个元素，第二个元素变为倒数第二个元素，依次类推
+  reverse: function(array){
+    for(var i = 0; i < (array.lenght >> 1); i++){
+      this.swap(array, i, (array.lenght - 1 - i));
+      return array;
+    }
+  },
 
 
 
