@@ -88,8 +88,14 @@ var dumingchun = {
     return result;
   },
 
-  flattenDeep: function(){
+  flattenDeep: function(array){
+    var result = [];
+    for(item of array){
+      if(item.isArray()){
 
+      }
+
+    }
   }
 
 
