@@ -51,17 +51,46 @@ var dumingchun = {
   },
 //创建一个切片数组，去除array前面的n个元素。（n默认值为1。）
   drop: function(array, n = 1){
-    var result = array.slice(n, array.length)
+    var result = array.slice(n, array.length);
 
     return result;
   },
+//返回第一个通过 predicate 判断为真值的元素的索引值（index），而不是元素本身
+  findIndex: function(array, predicate = _.identity, fromIndex = 0){
 
 
 
 
 
+    return idx;
+  },
+//类似_.findIndex， 区别是它是从右到左的迭代集合array中的元素。
+  findLastIndex: function(){
 
 
+
+
+
+  },
+//减少一级array嵌套深度。
+  flatten: function(array){
+    var result = [];
+    for(item of array){
+      if(item.isArray()){
+        for(var i = 0; i < item.length; i++){
+          result.push(item[i]);
+        }
+      }
+      else{
+        result.push(item);
+      }
+    }
+    return result;
+  },
+
+  flattenDeep: function(){
+
+  }
 
 
 }
