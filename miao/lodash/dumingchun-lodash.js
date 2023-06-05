@@ -27,7 +27,7 @@ var dumingchun = {
   compact: function(array){
     var result = [];
     for(item of array){
-      if(item !== false && item !== null && item !== 0 && item !== '' && item !== undefined && item !== NaN){
+      if(item !== false && item !== null && item !== 0 && item !== '' && item !== undefined && item !== NaN && item){
         result.push(item);
       }
     }
@@ -46,10 +46,8 @@ var dumingchun = {
   },
 //使用 value 值来填充（替换） array，从start位置开始, 到end位置结束（但不包含end位置）。
   fill: function(array , value, start = 0, end = array.length){
-
-
-
-
+    var result = array;
+    array.fill(value,start,end);
 
     return result;
   },
