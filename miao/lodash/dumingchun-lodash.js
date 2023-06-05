@@ -116,7 +116,7 @@ var dumingchun = {
     for(var i = 0; i < pairs.length; i++){
       map[(pairs[i])[0]] = (pairs[i])[1]
     }
-    return map
+    return map;
   },
 
 
@@ -126,7 +126,16 @@ var dumingchun = {
 
 
 
-
+  toPairs: function(object){
+    var result = [];
+    for(key in object){
+      var arr = []
+      arr.push(key)
+      arr.push(object[key])
+      result.push(arr)
+    }
+    return result;
+  }
 
 
 }
