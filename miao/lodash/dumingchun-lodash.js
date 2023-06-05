@@ -41,7 +41,7 @@ var dumingchun = {
     }
     return result;
   },
-//创建一个新数组，将array与任何数组 或 值连接在一起。
+  //创建一个新数组，将array与任何数组 或 值连接在一起。
   concat: function(array, ...values){
     var result = array;
     for(item of arguments){
@@ -110,8 +110,14 @@ var dumingchun = {
   flattenDepth: function(array, depth = 1){
 
   },
-
-
+  //与_.toPairs正好相反；这个方法返回一个由键值对pairs构成的对象。
+  fromPairs: function(pairs){
+    var map = {}
+    for(var i = 0; i < pairs.length; i++){
+      map[(pairs[i])[0]] = (pairs[i])[1]
+    }
+    return map
+  },
 
 
 
