@@ -104,15 +104,6 @@ var dumingchun = {
       }
     }
   },
-  //获取数组 array 的第一个元素。
-  head: function(array){
-    if(array.length < 1){
-      return undefined;
-    }
-    else{
-      return array[0];
-    }
-  },
   //减少一级array嵌套深度。
   flatten: function(array){
     var result = [];
@@ -159,6 +150,35 @@ var dumingchun = {
     }
     return map;
   },
+  //获取数组 array 的第一个元素。
+  head: function(array){
+    if(array.length < 1){
+      return undefined;
+    }
+    else{
+      return array[0];
+    }
+  },
+  //返回首次 value 在数组array中被找到的 索引值，如果 fromIndex 为负值，将从数组array尾端索引进行匹配。
+  indexOf: function(array, value, fromIndex = 0){
+    if(fromIndex == -1){
+      for(var i = array.length - 1; i >= 0; i--){
+        if(array[i] == value){
+          return i;
+        }
+      }
+    }
+    else{
+      for(var i = fromIndex; i < array.length; i++){
+        if(array[i] == value){
+          return i;
+        }
+      }
+    }
+
+  },
+
+
 
 
 
