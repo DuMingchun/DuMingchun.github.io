@@ -23,7 +23,15 @@
 
 
 var dumingchun = {
-//创建一个新数组，包含原数组中所有的非假值元素。例如false, null,0, "", undefined, 和 NaN 都是被认为是“假值”。
+  //将数组（array）拆分成多个 size 长度的区块，并将这些区块组成一个新数组
+  chunk: function(array , size = 1){
+    var result = [];
+    for(var i = 0; i < array.length; i += size){
+      result.push( array.slice(i, i + size) );
+    }
+    return result;
+  },
+  //创建一个新数组，包含原数组中所有的非假值元素。例如false, null,0, "", undefined, 和 NaN 都是被认为是“假值”。
   compact: function(array){
     var result = [];
     for(item of array){
@@ -33,29 +41,28 @@ var dumingchun = {
     }
     return result;
   },
-//将数组（array）拆分成多个 size 长度的区块，并将这些区块组成一个新数组
-  chunk: function(array , size = 1){
-    var result = [];
-    for(var i = 0; i < array.length; i += size){
-      result.push( array.slice(i, i + size) );
+//创建一个新数组，将array与任何数组 或 值连接在一起。
+  concat: function(array, ...values){
+    var result = array;
+    for(item of arguments){
+      result.push(item);
     }
+    return result;
+  },
+  //创建一个切片数组，去除array前面的n个元素。（n默认值为1。）
+  drop: function(array, n = 1){
+    var result = array.slice(n, array.length);
 
     return result;
   },
-//使用 value 值来填充（替换） array，从start位置开始, 到end位置结束（但不包含end位置）。
+  //使用 value 值来填充（替换） array，从start位置开始, 到end位置结束（但不包含end位置）。
   fill: function(array , value, start = 0, end = array.length){
     var result = array;
     array.fill(value,start,end);
 
     return result;
   },
-//创建一个切片数组，去除array前面的n个元素。（n默认值为1。）
-  drop: function(array, n = 1){
-    var result = array.slice(n, array.length);
-
-    return result;
-  },
-//返回第一个通过 predicate 判断为真值的元素的索引值（index），而不是元素本身
+  //返回第一个通过 predicate 判断为真值的元素的索引值（index），而不是元素本身
   findIndex: function(array, predicate = _.identity, fromIndex = 0){
 
 
@@ -64,7 +71,7 @@ var dumingchun = {
 
     return idx;
   },
-//类似_.findIndex， 区别是它是从右到左的迭代集合array中的元素。
+  //类似_.findIndex， 区别是它是从右到左的迭代集合array中的元素。
   findLastIndex: function(){
 
 
@@ -72,7 +79,7 @@ var dumingchun = {
 
 
   },
-//减少一级array嵌套深度。
+  //减少一级array嵌套深度。
   flatten: function(array){
     var result = [];
     for(item of array){
@@ -87,17 +94,19 @@ var dumingchun = {
     }
     return result;
   },
-//将array递归为一维数组。
+  //将array递归为一维数组。
   flattenDeep: function(array){
     var result = [];
     for(item of array){
       if(item.isArray()){
 
+
+
       }
 
     }
   },
-//根据 depth 递归减少 array 的嵌套层级
+  //根据 depth 递归减少 array 的嵌套层级
   flattenDepth: function(array, depth = 1){
 
   },
