@@ -117,7 +117,7 @@ var dumingchun = {
   flatten: function(array){
     var result = [];
     for(item of array){
-      if(item.isArray()){
+      if(Array.isArray(item)){
         for(var i = 0; i < item.length; i++){
           result.push(item[i]);
         }
