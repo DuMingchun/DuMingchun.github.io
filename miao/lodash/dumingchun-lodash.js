@@ -245,7 +245,8 @@ var dumingchun = {
 
   //反转array，使得第一个元素变为最后一个元素，第二个元素变为倒数第二个元素，依次类推
   reverse: function(array){
-    for(var i = 0; i < (array.lenght >> 1); i++){
+    var l = array.lenght >> 1;
+    for(var i = 0; i < l; i++){
       swap(array, i, (array.lenght - 1 - i));
       return array;
     }
