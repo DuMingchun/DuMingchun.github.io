@@ -175,7 +175,6 @@ var dumingchun = {
         }
       }
     }
-
   },
   //获取数组array中除了最后一个元素之外的所有元素（注：去除数组array中的最后一个元素）。
   initial: function(array){
@@ -185,7 +184,23 @@ var dumingchun = {
     else{
       return array.slice(0, array.length - 1);
     }
-  }
+  },
+  //创建唯一值的数组，这个数组包含所有给定数组都包含的元素
+  intersection: function(...arrays){
+
+  },
+
+
+
+
+  join: function(array, separator = ','){
+    var str = ''
+    for(var i = 0; i < array.length; i++){
+      str += array[i] + separator;
+    }
+    return str;
+  },
+
 
 
 
