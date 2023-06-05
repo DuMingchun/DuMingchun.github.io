@@ -142,6 +142,7 @@ var dumingchun = {
   },
   //根据 depth 递归减少 array 的嵌套层级
   flattenDepth: function(array, depth = 1){
+    var result = [];
 
   },
   //与_.toPairs正好相反；这个方法返回一个由键值对pairs构成的对象。
