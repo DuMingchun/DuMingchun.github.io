@@ -177,7 +177,15 @@ var dumingchun = {
     }
 
   },
-
+  //获取数组array中除了最后一个元素之外的所有元素（注：去除数组array中的最后一个元素）。
+  initial: function(array){
+    if(array.length < 1){
+      return undefined;
+    }
+    else{
+      return array.slice(0, array.length - 1);
+    }
+  }
 
 
 
