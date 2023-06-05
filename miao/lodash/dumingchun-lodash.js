@@ -104,6 +104,15 @@ var dumingchun = {
       }
     }
   },
+  //获取数组 array 的第一个元素。
+  head: function(array){
+    if(array.length < 1){
+      return undefined;
+    }
+    else{
+      return array[0];
+    }
+  },
   //减少一级array嵌套深度。
   flatten: function(array){
     var result = [];
