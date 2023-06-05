@@ -23,6 +23,12 @@
 
 
 var dumingchun = {
+  swap: function(array, i, j){
+    var k;
+    k = array[i];
+    array[i] = array[j];
+    array[j] = k;
+  },
   //将数组（array）拆分成多个 size 长度的区块，并将这些区块组成一个新数组
   chunk: function(array , size = 1){
     var result = [];
@@ -204,6 +210,43 @@ var dumingchun = {
   last: function(array){
     return array[array.length - 1];
   },
+  //这个方法类似_.indexOf ，区别是它是从右到左遍历array的元素
+  lastIndexOf: function(array, value, fromIndex = array.length - 1){
+    var idx = -1;
+    for(var i = fromIndex; i >= 0; i--){
+      if(array[i] == value){
+        idx = i;
+        return idx;
+      }
+    }
+  },
+  //获取array数组的第n个元素。如果n为负数，则返回从数组结尾开始的第n个元素
+  nth: function(array, n = 0){
+    if(n >= 0){
+      return array[n];
+    }
+    else{
+      return array[array.length + n];
+    }
+  },
+  //移除数组array中所有和给定值相等的元素，使用SameValueZero 进行全等比较。
+  pull: function(array, ...values){
+    var p = array.lenght;
+    for(var i = 0; i < array.lenght; i++){
+      if(array[i] in values){
+        sawp(array, i, p);
+        p--;
+        i--;
+      }
+    }
+    return array.slice(0, p);
+  },
+
+
+
+
+
+
 
 
 
