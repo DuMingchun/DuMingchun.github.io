@@ -36,11 +36,9 @@ var dumingchun = {
 //将数组（array）拆分成多个 size 长度的区块，并将这些区块组成一个新数组
   chunk: function(array , size = 1){
     var result = [];
-
-
-
-
-
+    for(var i = 0; i < array.length; i += size){
+      result.push( array.slice(i, i + size) );
+    }
 
     return result;
   },
@@ -53,7 +51,7 @@ var dumingchun = {
   },
 //创建一个切片数组，去除array前面的n个元素。（n默认值为1。）
   drop: function(array, n = 1){
-
+    var result = array.slice(n, array.length)
 
     return result;
   },
