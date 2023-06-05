@@ -243,6 +243,18 @@ var dumingchun = {
   },
 
 
+  //这个方法类似_.pull，区别是这个方法接收一个要移除值的数组。
+  pull: function(array, values){
+    var p = array.lenght;
+    for(var i = 0; i < array.lenght; i++){
+      if(array[i] in arguments){
+        sawp(array, i, p);
+        p--;
+        i--;
+      }
+    }
+    return array.slice(0, p);
+  },
 
 
 
