@@ -10,7 +10,10 @@
   <div style="text-align: center; margin-top: 300px;">
     <img src="mi/milogo.png" style="position: relative;">
     <div>
-      <img id="moon" src="mi/milogo.png" style="position: relative;">
+      <img id="earth" src="mi/milogo.png" style="position: relative;">
+      <div>
+        <img id="moon" src="mi/milogo.png" style="position: relative;">
+      </div>
     </div>
   </div>
   <script>
@@ -22,23 +25,37 @@
       }
       lastTime = time;
       cat.style.rotate = -(angle * 100) + "deg";
-      cat.style.top = (Math.sin(angle) * 200) + "px";
-      cat.style.left = (Math.cos(angle) * 300) + "px";
+      cat.style.top = (Math.sin(angle) * 50) + "px";
+      cat.style.left = (Math.cos(angle) * 50) + "px";
       requestAnimationFrame(animate);
     }
-    var moon = document.getElementById("moon")
+    var earth = document.getElementById("earth")
     function animate2(time){
       if(lastTime != null){
         angle += (time - lastTime) * 0.001;
       }
       lastTime = time;
-      moon.style.rotate = (angle * 300) + "deg";
+      earth.style.rotate = (angle * 300) + "deg";
+      earth.style.top = (Math.sin(angle) * 250) + "px";
+      earth.style.left = (Math.cos(angle) * 200) + "px";
+      requestAnimationFrame(animate2);
+    }
+
+
+    var moon = document.getElementById("moon")
+    function animate3(time){
+      if(lastTime != null){
+        angle += (time - lastTime) * 0.001;
+      }
+      lastTime = time;
+      moon.style.rotate = (angle * 600) + "deg";
       moon.style.top = (Math.sin(angle) * 50) + "px";
       moon.style.left = (Math.cos(angle) * 100) + "px";
-      requestAnimationFrame(animate2);
+      requestAnimationFrame(animate3);
     }
     requestAnimationFrame(animate);
     requestAnimationFrame(animate2);
+    requestAnimationFrame(animate3);
   </script>
 </body>
 </html>
