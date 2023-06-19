@@ -10,23 +10,70 @@
       border: 1px solid;
       width: 600px;
       height: 600px;
+      position: relative;
     }
     #tank{
       display: inline-block;
       font-size: 0px;
-      position: relative;
+      position: fixed;
     }
   </style>
 </head>
 <body>
   <div id="box">
-    <div id="tank">
+    <span id="bullet"></span>
+    <span id="tank" style="left:0px;top:0px;">
       <img src="mi/milogo.png">
-    </div>
+    </span>
   </div>
 
 
   <script>
+
+    var tank = document.getElementById("tank")
+    var vx = 0;
+    var vy = 0;
+    var v = 0.1;
+
+    var lastTime = null;
+    requestAnimationFrame(function ani(time){
+      var timeDiff = 0
+      if(lastTime !== null){
+        timeDiff = time - lastTime;
+      }
+      lastTime = time;
+
+      var factor = (vx !== 0 && vy !== 0) ? Math.SQRT1_2 : 1
+
+      tank.style.left = parseFloat(tank.style.left) + factor * vx * timeDiff + 'px'
+      tank.style.top = parseFloat(tank.style.top) + factor * vy * timeDiff + 'px'
+
+      requestAnimationFrame(ani);
+    })
+
+
+
+    window.addEventListener('keydown', function(e){
+      console.log(e.key + 'down');
+      if(e.key == 'ArrowLeft'){
+        vx = -v;
+      }
+      if(e.key == 'ArrowRight'){
+        vx = v;
+      }
+      if(e.key == 'ArrowUp'){
+        vy = -v;
+      }
+      if(e.key == 'ArrowDown'){
+        vy = v;
+      }
+    })
+    window.addEventListener('keyup', function(e){
+      if(e.key){
+        vx = 0
+        vy = 0
+      }
+    })
 
   </script>
 </body>
