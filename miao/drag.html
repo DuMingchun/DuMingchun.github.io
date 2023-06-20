@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .window{
+      position: fixed;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="draggable" style="left:0;top:0;background-color: aquamarine;"></div>
+  <div class="draggable" style="left:0;top:0;background-color: pink;"></div>
+  <div class="draggable" style="left:0;top:0;background-color: bisque;"></div>
+
+  <script>
+    var lastX = 0;
+    var lastY = 0;
+    var el = null;
+
+    document.addEventListener('mousedown', e => {
+      if(e.target.matches('.draggable')){
+        el = e.target
+        lastX =
+      }
+    })
+  </script>
+</body>
+</html>
