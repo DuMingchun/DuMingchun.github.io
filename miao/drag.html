@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .window{
+    .draggable{
       position: fixed;
       width: 100px;
       height: 100px;
@@ -23,12 +23,48 @@
     var lastY = 0;
     var el = null;
 
-    document.addEventListener('mousedown', e => {
+    window.addEventListener('mousedown', e => {
       if(e.target.matches('.draggable')){
+        e.preventDefault() //解除默认事件
         el = e.target
-        lastX =
+        lastX = e.clientX
+        lastY = e.clientY
+
+        window.addEventListener('mousemove', onMove)
       }
     })
+
+    function onMove(e){
+      if(e.which == 0 || e.buttons == 0){
+        window.removeEventListener('mousemove', onMove)
+      }
+      else{
+        var moveX = e.clientX - lastX;
+        var moveY = e.clientY - lastY;
+        var left = parseFloat(el.style.left) + moveX
+        var top = parseFloat(el.style.top) + moveY
+        if(left < 0){
+          left = 0;
+        }
+        if(left > window.innerWidth - el.offsetWidth){
+          left = window.innerWidth - el.offsetWidth;
+        }
+        if(top < 0){
+          top = 0;
+        }
+        if(top > window.innerHeight - el.offsetHeight){
+          top = window.innerHeight - el.offsetHeight;
+        }
+
+        el.style.left = left + 'px';
+        el.style.top = top + 'px';
+
+        lastX = e.clientX
+        lastY = e.clientY
+      }
+      console.log('a')
+    }
+
   </script>
 </body>
 </html>
