@@ -19,17 +19,25 @@
   <div class="draggable" style="left:0;top:0;background-color: bisque;"></div>
 
   <script>
-    var lastX = 0;
-    var lastY = 0;
+    var startX = 0;
+    var startY = 0;
     var el = null;
+    var elstartX = 0;
+    var elstartY = 0;
+    var zindex = 5;
+
 
     window.addEventListener('mousedown', e => {
       if(e.target.matches('.draggable')){
         e.preventDefault() //解除默认事件
         el = e.target
-        lastX = e.clientX
-        lastY = e.clientY
+        el.style.zIndex = zindex++
 
+        startX = e.clientX
+        startY = e.clientY
+
+        elstartX = parseFloat(el.style.left)
+        elstartY = parseFloat(el.style.top)
         window.addEventListener('mousemove', onMove)
       }
     })
@@ -39,20 +47,20 @@
         window.removeEventListener('mousemove', onMove)
       }
       else{
-        var moveX = e.clientX - lastX;
-        var moveY = e.clientY - lastY;
-        var left = parseFloat(el.style.left) + moveX
-        var top = parseFloat(el.style.top) + moveY
-        if(left < 0){
+        var moveX = e.clientX - startX;
+        var moveY = e.clientY - startY;
+        var left = elstartX + moveX
+        var top = elstartY + moveY
+        if(left < 50){
           left = 0;
         }
-        if(left > window.innerWidth - el.offsetWidth){
+        if(left > window.innerWidth - el.offsetWidth - 50){
           left = window.innerWidth - el.offsetWidth;
         }
-        if(top < 0){
+        if(top < 50){
           top = 0;
         }
-        if(top > window.innerHeight - el.offsetHeight){
+        if(top > window.innerHeight - el.offsetHeight - 50){
           top = window.innerHeight - el.offsetHeight;
         }
 
