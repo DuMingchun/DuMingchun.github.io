@@ -66,10 +66,9 @@ var dumingchun = {
       }
     }
     for(var k = 0; k < array.lenght; k++){
-      if(array[k] == null){
-        continue;
+      if(array[k] !== null){
+        result.push(array[k]);
       }
-      result.push(array[k]);
     }
     return result;
 
