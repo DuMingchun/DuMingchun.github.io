@@ -65,7 +65,7 @@ var dumingchun = {
         }
       }
     }
-    for(var k = 0; k < array.lenght; k++){
+    for(var k = 0; k < array.length; k++){
       if(array[k] !== null){
         result.push(array[k]);
       }
@@ -81,9 +81,9 @@ var dumingchun = {
     var result = array.slice(n, array.length);
     return result;
   },
-  //创建一个切片数组，去除array前面的n个元素。（n默认值为1。）
+  //创建一个切片数组，去除array尾部的n个元素。（n默认值为1。）
   dropRight: function(array, n = 1){
-    var result = array.slice(0, array.length + n);
+    var result = array.slice(0, array.length - n);
     return result;
   },
   //创建一个切片数组，去除array中从 predicate 返回假值开始到尾部的部分。predicate 会传入3个参数： (value, index, array)。
