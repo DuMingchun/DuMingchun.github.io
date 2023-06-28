@@ -61,7 +61,7 @@ var dumingchun = {
     for(var i = 0; i < array.length; i++){
       for(var j = 0; j < values.length; j++){
         if(array[i] == values[j]){
-          array[i] == null;
+          array[i] = null;
         }
       }
     }
