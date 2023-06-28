@@ -130,17 +130,14 @@ var dumingchun = {
     return result;
   },
   //将array递归为一维数组。
-  flattenDeep: function(array){
-    var result = [];
-    for(item of array){
-      if(Array.isArray(item)){
-        this.flatten(item)
-
-
-      }
-
+  flattenDeep: function(array, n){
+    while (n > 0 && array.some(Array.isArray)) {
+      array = [].concat(...array);
+      n--;
     }
+    return array;
   },
+
   //根据 depth 递归减少 array 的嵌套层级
   flattenDepth: function(array, depth = 1){
     var result = [];
