@@ -48,9 +48,9 @@ var dumingchun = {
     return result;
   },
   //创建一个新数组，将array与任何数组 或 值连接在一起。
-  concat: function(array, ...values){
+  concat: function(array, values){
     var result = array;
-    for(item of arguments){
+    for(item of values){
       result.push(item);
     }
     return result;

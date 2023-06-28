@@ -23,7 +23,12 @@
   <input type="text" id="Input" value="foo">
   <button onclick="run()">Run</button>
   <br>  <!--  onclick="run()"  -->
+  <label for=""><input id="flagg" type="checkbox" >i</label>
   <label for=""><input id="flagg" type="checkbox" checked>g</label>
+  <label for=""><input id="flagg" type="checkbox" >m</label>
+  <label for=""><input id="flagg" type="checkbox" >s</label>
+  <label for=""><input id="flagg" type="checkbox" >u</label>
+  <label for=""><input id="flagg" type="checkbox" >y</label>
   <p>输入字符串:</p>
   <textarea id="string"  cols="30" rows="20">
     foobar
@@ -41,10 +46,10 @@
       return flags;
     }
     function run(){
-      var result = Input.value;
+      var result = reInput.value;
       var flags = getFlags();
       var re = new RegExp(result, flags);  //创建一个正则
-      var str = string.value;
+      var str = stringInput.value;
       var match;
       var log = '';
       var index = 0;
