@@ -87,9 +87,8 @@ var dumingchun = {
     return result;
   },
   //创建一个切片数组，去除array中从 predicate 返回假值开始到尾部的部分。predicate 会传入3个参数： (value, index, array)。
-  dropRightWhile: function(array, predicate = _.identity){
-    var result = array.slice(0, array.length + n);
-    return result;
+  dropRightWhile: function(array, predicate){
+
   },
   //使用 value 值来填充（替换） array，从start位置开始, 到end位置结束（但不包含end位置）。
   fill: function(array , value, start = 0, end = array.length){
@@ -118,14 +117,14 @@ var dumingchun = {
   //减少一级array嵌套深度。
   flatten: function(array){
     var result = [];
-    for(item of array){
-      if(Array.isArray(item)){
-        for(var i = 0; i < item.length; i++){
-          result.push(item[i]);
+    for(var i = 0 ; i < array.length ; i++){
+      if(Array.isArray(array[i])){
+        for(var j = 0 ; j < array[i].length ; j++){
+          result.push(array[i][j])
         }
       }
       else{
-        result.push(item);
+        result.push(array[i])
       }
     }
     return result;
@@ -134,8 +133,8 @@ var dumingchun = {
   flattenDeep: function(array){
     var result = [];
     for(item of array){
-      if(item.isArray()){
-
+      if(Array.isArray(item)){
+        this.flatten(item)
 
 
       }
@@ -237,7 +236,7 @@ var dumingchun = {
   //移除数组array中所有和给定值相等的元素，使用SameValueZero 进行全等比较。
   pull: function(array, ...values){
 
-    for(var i = 0; i < array.lenght; i++){
+    for(var i = 0; i < array.length; i++){
 
     }
     return array.slice(0, p);
@@ -250,9 +249,9 @@ var dumingchun = {
 
   //反转array，使得第一个元素变为最后一个元素，第二个元素变为倒数第二个元素，依次类推
   reverse: function(array){
-    var l = array.lenght >> 1;
+    var l = array.length >> 1;
     for(var i = 0; i < l; i++){
-      swap(array, i, (array.lenght - 1 - i));
+      swap(array, i, (array.length - 1 - i));
       return array;
     }
   },
