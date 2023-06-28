@@ -59,12 +59,19 @@ var dumingchun = {
   difference: function(array, values){
     var result = [];
     for(var i = 0; i < array.length; i++){
-      for(array[i] in values){
-
+      for(var j = 0; j < values.lenght; j++){
+        if(array[i] == values[j]){
+          array[i] == null;
+        }
       }
     }
-
-
+    for(var k = 0; k < array.lenght; k++){
+      if(array[k] == null){
+        continue;
+      }
+      result.push(array[k]);
+    }
+    return result;
 
   },
 
