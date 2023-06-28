@@ -130,8 +130,8 @@ var dumingchun = {
     return result;
   },
   //将array递归为一维数组。
-  flattenDeep: function(array, n){
-    while (n > 0 && array.some(Array.isArray)) {
+  flattenDeep: function(array){
+    while (array.some(Array.isArray)) {
       array = [].concat(...array);
       n--;
     }
@@ -140,14 +140,11 @@ var dumingchun = {
 
   //根据 depth 递归减少 array 的嵌套层级
   flattenDepth: function(array, depth = 1){
-    var result = [];
-    var stk = depth;
-    for(item of array){
-      if(item.isArray()){
-
-      }
+    while (depth > 0 && array.some(Array.isArray)) {
+      array = [].concat(...array);
+      depth--;
     }
-
+    return array;
   },
   //与_.toPairs正好相反；这个方法返回一个由键值对pairs构成的对象。
   fromPairs: function(pairs){
