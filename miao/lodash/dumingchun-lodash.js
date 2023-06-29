@@ -200,7 +200,7 @@ var dumingchun = {
   join: function(array, separator = ','){
     var str = ''
     for(var i = 0; i < array.length; i++){
-      str += toString(array[i]) + toString(separator);
+      str += array[i].toString() + separator;
     }
     return str.slice(0, -1);
   },
