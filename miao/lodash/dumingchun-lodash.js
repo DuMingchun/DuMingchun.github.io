@@ -133,7 +133,7 @@ var dumingchun = {
   flattenDeep: function(array){
     while (array.some(Array.isArray)) {
       array = [].concat(...array);
-      n--;
+
     }
     return array;
   },
