@@ -190,7 +190,7 @@ var dumingchun = {
     }
   },
   //创建唯一值的数组，这个数组包含所有给定数组都包含的元素
-  intersection: function(...arrays){
+  intersection: function(arrays){
 
   },
 
