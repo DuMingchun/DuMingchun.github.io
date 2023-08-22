@@ -30,17 +30,25 @@
   <div class="container">
     <h1>todos</h1>
     <div>
-      <input type="checkbox" class="toggle-all" v-bind:checked="todos.every(it => it.completed)" @click="toggleAll()">
+      <input type="checkbox" class="toggle-all" v-bind:checked="todos.every(it => it.completed) && todos.length" @click="toggleAll()">
       <!-- todos.every(it => it.completed) 所有的completed都为true时成立 todos是数组-->
       <input type="text" @keyup.enter="addTodo($event)" placeholder="what needs to be done?">
                         <!-- $event 传事件参数 -->
     </div>
     <ul id="todo-list" :class="`visible-${visibleTodos}`">
       <!--                      -->
-      <li class="completed" v-for="(todo, idx) of todos">
+      <li :class="todo.completed ? 'completed' : 'active'" v-for="(todo, idx) of counts(todos)">
         <!-- todo of todos 哪里需要循环写哪里 todos是下面new Vue里的data字段里的todos  -->
         <input data-index="0" type="checkbox" v-bind:checked="todo.completed" @change="changeTodoState(idx)">
-        <span>{{ todo.content }}</span>
+        <span v-show="editIdx !== idx" @dblclick="edit(idx)">{{ todo.content }}</span>
+        <input
+          @keyup.enter="todo.content = $event.target.value.trim();editIdx = -1"
+          @blur="todo.content = $event.target.value.trim();editIdx = -1"
+          @keyup.escape="editIdx = -1"
+          v-show="editIdx == idx"
+          type="text"
+          :value="todo.content"
+        >
         <button v-on:click="deleteTodo(idx)">&times;</button><!-- v-on:click == @click -->
       </li>
     </ul>
@@ -48,15 +56,29 @@
       <span><em>{{ todos.filter(it => !it.completed).length }}</em> items left</span>
       <!-- array.filter 筛选,符合的被保存,返回新数组 -->
       <div class="visible-select">
-        <label><input type="radio" @click="visibileTodos = 'all'" value="all" name="visible-todos" checked> All</label>
-        <label><input type="radio" @click="visibileTodos = 'active'" value="active" name="visible-todos"> Active</label>
-        <label><input type="radio" @click="visibileTodos = 'completed'" value="completed" name="visible-todos"> Completed</label>
+        <label><input type="radio" @click="visibleTodos = $event.target.value" value="all" name="visible-todos" checked> All</label>
+        <label><input type="radio" @click="visibleTodos = 'active'" value="active" name="visible-todos"> Active</label>
+        <label><input type="radio" @click="visibleTodos = 'completed'" value="completed" name="visible-todos"> Completed</label>
       </div>
       <button @click="clearCompleted()" v-show="todos.some(it => it.completed)">Clear completed</button>
     </div>
   </div>
 
+  <div class="container2">
+    <button @click="increase()" >{{ count }}</button>
+    <button @click="decrease()" > - </button>
+  </div>
 
+
+  <!--
+  :attr="expr" 属性绑定
+  @event="statement" 事件绑定，其内可以用$event代表发生的事件的事件对象
+  v-for="(val,index) of array" 迭代，要放在需要重复的元素上
+  v-show="expr" 元素的显示与隐藏，表达式为真的时候元素显示,为假则隐藏
+  @keyup.enter  事件绑定外加修饰符，enter表示由enter键出发的keyup事件
+  <input :checked="expr" > checkbox以及radio的check状态，expr表达式为真就勾上
+  <span>{{ expr }}</span> 内容插值
+  -->
 
   <script src="./vue-2.7.14.js"></script>
   <script>
@@ -73,7 +95,8 @@
           content: 'sleep',
           completed: true,
         }],
-        visibileTodos: 'all'
+        visibleTodos: 'all',
+        editIdx: -1,
       },
       methods: {
         // deleteTodo: function(idx)
@@ -112,10 +135,36 @@
         clearCompleted(){
           this.todos = this.todos.filter(it => !it.completed)
         },
-        visibleTodos: 'all',
+        counts(){
+          if(this.visibleTodos == 'completed'){
+            return this.todos.filter(it => it.completed)
+          } else if (this.visibleTodos == 'active'){
+            return this.todos.filter(it => !it.completed)
+          } else {
+            return this.todos
+          }
+        },
+        edit(idx){
+          this.editIdx = idx
+        },
       }
     })
 
+
+    var app2 = new Vue({
+      el: '.container2',
+      data: {
+        count: 0,
+      },
+      methods: {
+        increase(){
+          this.count++
+        },
+        decrease(){
+          this.count--
+        },
+      },
+    })
   </script>
 
 </body>
