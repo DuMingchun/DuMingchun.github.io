@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .completed {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+    input {
+      outline: none;
+      user-select: none;
+      border: 1px solid;
+    }
+    input:read-only {
+      border-color: white;
+    }
+    ul.visible-active li.completed {
+      display: none;
+    }
+    ul.visible-completed li:not(.completed) {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>todos</h1>
+    <div>
+      <input type="checkbox" class="toggle-all" v-bind:checked="todos.every(it => it.completed)" @click="toggleAll()">
+      <!-- todos.every(it => it.completed) 所有的completed都为true时成立 todos是数组-->
+      <input type="text" @keyup.enter="addTodo($event)" placeholder="what needs to be done?">
+                        <!-- $event 传事件参数 -->
+    </div>
+    <ul id="todo-list" :class="`visible-${visibleTodos}`">
+      <!--                      -->
+      <li class="completed" v-for="(todo, idx) of todos">
+        <!-- todo of todos 哪里需要循环写哪里 todos是下面new Vue里的data字段里的todos  -->
+        <input data-index="0" type="checkbox" v-bind:checked="todo.completed" @change="changeTodoState(idx)">
+        <span>{{ todo.content }}</span>
+        <button v-on:click="deleteTodo(idx)">&times;</button><!-- v-on:click == @click -->
+      </li>
+    </ul>
+    <div>
+      <span><em>{{ todos.filter(it => !it.completed).length }}</em> items left</span>
+      <!-- array.filter 筛选,符合的被保存,返回新数组 -->
+      <div class="visible-select">
+        <label><input type="radio" @click="visibileTodos = 'all'" value="all" name="visible-todos" checked> All</label>
+        <label><input type="radio" @click="visibileTodos = 'active'" value="active" name="visible-todos"> Active</label>
+        <label><input type="radio" @click="visibileTodos = 'completed'" value="completed" name="visible-todos"> Completed</label>
+      </div>
+      <button @click="clearCompleted()" v-show="todos.some(it => it.completed)">Clear completed</button>
+    </div>
+  </div>
+
+
+
+  <script src="./vue-2.7.14.js"></script>
+  <script>
+    var app = new Vue({
+      el: '.container',
+      data: {
+        todos: [{
+          content: 'eat',
+          completed: true,
+        }, {
+          content: 'drink',
+          completed: false,
+        }, {
+          content: 'sleep',
+          completed: true,
+        }],
+        visibileTodos: 'all'
+      },
+      methods: {
+        // deleteTodo: function(idx)
+        deleteTodo(idx){
+          this.todos.splice(idx, 1)
+        },
+        changeTodoState(idx){
+          this.todos[idx].completed = !this.todos[idx].completed
+        },
+        toggleAll(){
+          if(this.todos.every(it => it.completed)){
+            // 如果todos的所有子元素completed都是true
+            this.todos.forEach(it => {
+              it.completed = false
+              // 点一下,把所有completed都改为false
+            })
+          } else {
+            this.todos.forEach(it => {
+              it.completed = true
+              // 点一下,把所有completed都改为true
+            })
+          }
+        },
+        addTodo(e){
+          // if(e.key == 'Enter')
+          var text = e.target.value.trim()
+          if (text) {
+            this.todos.push({
+              content: text,
+              completed: false,
+            })
+            // 此时的this 是var app = new Vue 的 'app'  并不是data:
+            e.target.value = ''
+          }
+        },
+        clearCompleted(){
+          this.todos = this.todos.filter(it => !it.completed)
+        },
+        visibleTodos: 'all',
+      }
+    })
+
+  </script>
+
+</body>
+</html>
